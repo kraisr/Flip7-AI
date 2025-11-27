@@ -228,8 +228,8 @@ class QLearningAgent:
         Args:
             filepath: Path to save file
         """
-        # Convert defaultdict to regular dict for JSON serialization
-        q_table_dict = {str(k): v for k, v in self.q_table.items()}
+        # Convert defaultdict to regular dict
+        q_table_dict = dict(self.q_table)
         
         data = {
             'q_table': q_table_dict,
@@ -247,6 +247,8 @@ class QLearningAgent:
                 pickle.dump(data, f)
         except Exception:
             # Fallback: save as JSON (requires converting tuples to strings)
+            q_table_dict_str = {str(k): v for k, v in q_table_dict.items()}
+            data['q_table'] = q_table_dict_str
             with open(filepath.replace('.pkl', '.json'), 'w') as f:
                 json.dump(data, f, indent=2)
     
@@ -261,6 +263,11 @@ class QLearningAgent:
             # Try pickle first
             with open(filepath, 'rb') as f:
                 data = pickle.load(f)
+            
+            # Check if keys are strings (from old format) and convert back to tuples
+            if data['q_table'] and isinstance(next(iter(data['q_table'].keys())), str):
+                # Old format: keys are strings, convert back to tuples
+                data['q_table'] = {eval(k): v for k, v in data['q_table'].items()}
         except (FileNotFoundError, ValueError):
             # Try JSON
             json_path = filepath.replace('.pkl', '.json')
@@ -269,7 +276,9 @@ class QLearningAgent:
                 # Convert string keys back to tuples
                 data['q_table'] = {eval(k): v for k, v in data['q_table'].items()}
         
-        self.q_table = defaultdict(lambda: {0: 0.0, 1: 0.0}, data['q_table'])
+        # Create defaultdict and populate with loaded data
+        self.q_table = defaultdict(lambda: {0: self.optimistic_init_value, 1: self.optimistic_init_value})
+        self.q_table.update(data['q_table'])
         self.learning_rate = data.get('learning_rate', self.learning_rate)
         self.discount_factor = data.get('discount_factor', self.discount_factor)
         self.epsilon = data.get('epsilon', self.epsilon)

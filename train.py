@@ -193,6 +193,10 @@ def evaluate_agent(env: Flip7RLEnv, agent: QLearningAgent, num_episodes: int = 1
     unknown_states = 0
     total_decisions = 0
     
+    # Update environment's opponent agents if provided
+    if opponent_agents is not None:
+        env.opponent_agents = opponent_agents
+    
     # Set agent to evaluation mode (no exploration)
     original_epsilon = agent.epsilon
     agent.set_epsilon(0.0)

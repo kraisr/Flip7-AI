@@ -8,6 +8,7 @@ This helps the agent learn more effectively by building up skills progressively.
 import argparse
 import sys
 import os
+import random
 from datetime import datetime
 from rl_env import Flip7RLEnv
 from q_learning_agent import QLearningAgent
@@ -42,7 +43,8 @@ def curriculum_training(
     discount_factor: float = 0.90,
     epsilon: float = 1.0,
     epsilon_min: float = 0.05,
-    epsilon_decay: float = 0.998
+    epsilon_decay: float = 0.998,
+    random_seed: int = None
 ):
     """
     Train agent using curriculum learning.
@@ -61,7 +63,13 @@ def curriculum_training(
         epsilon: Initial exploration rate
         epsilon_min: Minimum exploration rate
         epsilon_decay: Epsilon decay rate per episode
+        random_seed: Random seed for reproducibility (None for random)
     """
+    # Set random seed for reproducibility
+    if random_seed is not None:
+        random.seed(random_seed)
+        print(f"Random seed set to: {random_seed}")
+    
     env = Flip7RLEnv()
     
     # Create agents for different difficulty levels
@@ -215,6 +223,8 @@ if __name__ == "__main__":
     parser.add_argument("--epsilon", type=float, default=1.0, help="Initial epsilon")
     parser.add_argument("--epsilon-min", type=float, default=0.05, help="Minimum epsilon")
     parser.add_argument("--epsilon-decay", type=float, default=0.998, help="Epsilon decay rate")
+    parser.add_argument("--seed", type=int, default=None, 
+                       help="Random seed for reproducibility (default: None, uses random seed)")
     parser.add_argument("--log-file", type=str, default=None, 
                        help="File to append output to (default: curriculum_training_YYYYMMDD_HHMMSS.log)")
     
@@ -252,7 +262,8 @@ if __name__ == "__main__":
             discount_factor=args.discount,
             epsilon=args.epsilon,
             epsilon_min=args.epsilon_min,
-            epsilon_decay=args.epsilon_decay
+            epsilon_decay=args.epsilon_decay,
+            random_seed=args.seed
         )
         
         print(f"\n{'='*70}")
