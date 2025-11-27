@@ -1,0 +1,2632 @@
+
+======================================================================
+Curriculum Learning Started at 2025-11-27 17:20:23
+Logging to: curriculum_training_20251127_172023.log
+======================================================================
+
+======================================================================
+CURRICULUM LEARNING
+======================================================================
+Total episodes: 20000
+Learning rate: 0.25, Discount: 0.9
+Stage 1 (Random): 6000 episodes
+Stage 2 (Conservative): 8000 episodes
+Stage 3 (Heuristic): 6000 episodes
+======================================================================
+
+======================================================================
+STAGE 1: Training against Random opponents
+======================================================================
+Starting training for 6000 episodes...
+Initial epsilon: 1.000
+Learning rate: 0.25, Discount: 0.9
+------------------------------------------------------------
+Finished episode 10 | reward=0.93, length=149
+Finished episode 20 | reward=0.12, length=132
+Finished episode 30 | reward=0.48, length=146
+Finished episode 40 | reward=0.92, length=160
+Finished episode 50 | reward=0.72, length=147
+Finished episode 60 | reward=0.13, length=141
+Finished episode 70 | reward=0.74, length=175
+Finished episode 80 | reward=0.79, length=138
+Finished episode 90 | reward=0.81, length=180
+Finished episode 100 | reward=1.50, length=126
+Episode 100/6000 - Epsilon: 0.819, Q-table: 2714 states
+Finished episode 110 | reward=0.83, length=174
+Finished episode 120 | reward=0.38, length=149
+Finished episode 130 | reward=0.79, length=174
+Finished episode 140 | reward=0.70, length=120
+Finished episode 150 | reward=0.41, length=212
+Finished episode 160 | reward=0.79, length=177
+Finished episode 170 | reward=0.67, length=182
+Finished episode 180 | reward=0.58, length=183
+Finished episode 190 | reward=1.36, length=142
+Finished episode 200 | reward=0.76, length=144
+Episode 200/6000 - Epsilon: 0.670, Q-table: 4679 states
+Finished episode 210 | reward=0.33, length=186
+Finished episode 220 | reward=0.87, length=121
+Finished episode 230 | reward=0.18, length=144
+Finished episode 240 | reward=0.58, length=144
+Finished episode 250 | reward=0.89, length=183
+Finished episode 260 | reward=-0.21, length=168
+Finished episode 270 | reward=1.29, length=145
+Finished episode 280 | reward=0.53, length=128
+Finished episode 290 | reward=1.48, length=179
+Finished episode 300 | reward=0.68, length=144
+Episode 300/6000 - Epsilon: 0.548, Q-table: 6320 states
+Finished episode 310 | reward=0.40, length=175
+Finished episode 320 | reward=0.19, length=126
+Finished episode 330 | reward=1.31, length=159
+Finished episode 340 | reward=0.98, length=148
+Finished episode 350 | reward=1.67, length=149
+Finished episode 360 | reward=0.71, length=196
+Finished episode 370 | reward=2.01, length=148
+Finished episode 380 | reward=0.67, length=148
+Finished episode 390 | reward=1.11, length=165
+Finished episode 400 | reward=1.43, length=181
+Episode 400/6000 - Epsilon: 0.449, Q-table: 7863 states
+Finished episode 410 | reward=0.37, length=174
+Finished episode 420 | reward=0.97, length=175
+Finished episode 430 | reward=0.77, length=135
+Finished episode 440 | reward=1.56, length=146
+Finished episode 450 | reward=1.12, length=132
+Finished episode 460 | reward=0.81, length=190
+Finished episode 470 | reward=-0.00, length=184
+Finished episode 480 | reward=1.61, length=183
+Finished episode 490 | reward=1.03, length=228
+Finished episode 500 | reward=0.36, length=136
+Evaluation: 6/50 wins (12.0%)
+  Avg Reward: 0.78
+  Unknown States: 0.0% (0/43)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 500/6000
+  Avg Reward: 0.84, Avg Length: 153.2
+  Win Rate: 12.0%, Epsilon: 0.368
+  Q-table size: 9574
+  Overall Win Rate: 25.0%
+------------------------------------------------------------
+Finished episode 510 | reward=0.21, length=117
+Finished episode 520 | reward=0.85, length=152
+Finished episode 530 | reward=1.66, length=138
+Finished episode 540 | reward=0.53, length=182
+Finished episode 550 | reward=0.62, length=149
+Finished episode 560 | reward=1.13, length=142
+Finished episode 570 | reward=1.74, length=196
+Finished episode 580 | reward=1.19, length=152
+Finished episode 590 | reward=1.71, length=142
+Finished episode 600 | reward=0.71, length=157
+Episode 600/6000 - Epsilon: 0.301, Q-table: 10776 states
+Finished episode 610 | reward=1.43, length=134
+Finished episode 620 | reward=1.23, length=138
+Finished episode 630 | reward=0.46, length=138
+Finished episode 640 | reward=0.80, length=126
+Finished episode 650 | reward=1.01, length=144
+Finished episode 660 | reward=0.73, length=133
+Finished episode 670 | reward=1.55, length=192
+Finished episode 680 | reward=0.71, length=111
+Finished episode 690 | reward=1.41, length=106
+Finished episode 700 | reward=1.36, length=161
+Episode 700/6000 - Epsilon: 0.246, Q-table: 11820 states
+Finished episode 710 | reward=0.44, length=129
+Finished episode 720 | reward=0.56, length=182
+Finished episode 730 | reward=1.61, length=109
+Finished episode 740 | reward=1.93, length=133
+Finished episode 750 | reward=0.75, length=151
+Finished episode 760 | reward=0.49, length=113
+Finished episode 770 | reward=1.80, length=183
+Finished episode 780 | reward=1.07, length=123
+Finished episode 790 | reward=1.00, length=148
+Finished episode 800 | reward=1.40, length=119
+Episode 800/6000 - Epsilon: 0.202, Q-table: 12797 states
+Finished episode 810 | reward=0.17, length=110
+Finished episode 820 | reward=0.22, length=132
+Finished episode 830 | reward=0.13, length=151
+Finished episode 840 | reward=0.96, length=155
+Finished episode 850 | reward=0.82, length=135
+Finished episode 860 | reward=1.65, length=120
+Finished episode 870 | reward=0.73, length=156
+Finished episode 880 | reward=0.73, length=156
+Finished episode 890 | reward=0.29, length=112
+Finished episode 900 | reward=0.41, length=133
+Episode 900/6000 - Epsilon: 0.165, Q-table: 13651 states
+Finished episode 910 | reward=1.76, length=102
+Finished episode 920 | reward=-0.02, length=137
+Finished episode 930 | reward=0.42, length=140
+Finished episode 940 | reward=0.68, length=141
+Finished episode 950 | reward=0.43, length=145
+Finished episode 960 | reward=1.69, length=142
+Finished episode 970 | reward=0.36, length=132
+Finished episode 980 | reward=1.48, length=120
+Finished episode 990 | reward=0.80, length=134
+Finished episode 1000 | reward=1.10, length=138
+Evaluation: 24/50 wins (48.0%)
+  Avg Reward: 1.14
+  Unknown States: 0.0% (0/49)
+  Avg Q(HIT): 0.05, Avg Q(STAY): 0.06
+Episode 1000/6000
+  Avg Reward: 1.01, Avg Length: 142.6
+  Win Rate: 48.0%, Epsilon: 0.135
+  Q-table size: 14928
+  Overall Win Rate: 32.6%
+------------------------------------------------------------
+Finished episode 1010 | reward=2.04, length=105
+Finished episode 1020 | reward=0.51, length=108
+Finished episode 1030 | reward=1.55, length=142
+Finished episode 1040 | reward=1.08, length=117
+Finished episode 1050 | reward=1.65, length=119
+Finished episode 1060 | reward=0.37, length=115
+Finished episode 1070 | reward=1.51, length=147
+Finished episode 1080 | reward=0.84, length=141
+Finished episode 1090 | reward=0.52, length=150
+Finished episode 1100 | reward=0.86, length=145
+Episode 1100/6000 - Epsilon: 0.111, Q-table: 15705 states
+Finished episode 1110 | reward=1.40, length=128
+Finished episode 1120 | reward=1.70, length=123
+Finished episode 1130 | reward=0.86, length=128
+Finished episode 1140 | reward=1.78, length=129
+Finished episode 1150 | reward=0.64, length=133
+Finished episode 1160 | reward=1.30, length=107
+Finished episode 1170 | reward=0.96, length=121
+Finished episode 1180 | reward=0.69, length=122
+Finished episode 1190 | reward=0.70, length=152
+Finished episode 1200 | reward=1.57, length=145
+Episode 1200/6000 - Epsilon: 0.091, Q-table: 16518 states
+Finished episode 1210 | reward=1.83, length=134
+Finished episode 1220 | reward=0.64, length=146
+Finished episode 1230 | reward=0.78, length=126
+Finished episode 1240 | reward=1.38, length=99
+Finished episode 1250 | reward=1.65, length=119
+Finished episode 1260 | reward=1.52, length=130
+Finished episode 1270 | reward=1.86, length=127
+Finished episode 1280 | reward=1.01, length=162
+Finished episode 1290 | reward=1.54, length=104
+Finished episode 1300 | reward=1.22, length=174
+Episode 1300/6000 - Epsilon: 0.074, Q-table: 17312 states
+Finished episode 1310 | reward=1.48, length=143
+Finished episode 1320 | reward=0.56, length=119
+Finished episode 1330 | reward=0.46, length=151
+Finished episode 1340 | reward=0.74, length=140
+Finished episode 1350 | reward=0.10, length=127
+Finished episode 1360 | reward=0.27, length=152
+Finished episode 1370 | reward=1.01, length=129
+Finished episode 1380 | reward=2.22, length=126
+Finished episode 1390 | reward=0.78, length=136
+Finished episode 1400 | reward=1.57, length=118
+Episode 1400/6000 - Epsilon: 0.061, Q-table: 17903 states
+Finished episode 1410 | reward=1.07, length=157
+Finished episode 1420 | reward=0.73, length=135
+Finished episode 1430 | reward=0.78, length=137
+Finished episode 1440 | reward=1.52, length=148
+Finished episode 1450 | reward=1.62, length=113
+Finished episode 1460 | reward=0.96, length=123
+Finished episode 1470 | reward=0.12, length=137
+Finished episode 1480 | reward=1.04, length=159
+Finished episode 1490 | reward=1.52, length=121
+Finished episode 1500 | reward=1.57, length=129
+Evaluation: 21/50 wins (42.0%)
+  Avg Reward: 1.03
+  Unknown States: 0.0% (0/35)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 1500/6000
+  Avg Reward: 1.06, Avg Length: 135.8
+  Win Rate: 42.0%, Epsilon: 0.050
+  Q-table size: 18936
+  Overall Win Rate: 36.3%
+------------------------------------------------------------
+Finished episode 1510 | reward=0.74, length=133
+Finished episode 1520 | reward=1.43, length=127
+Finished episode 1530 | reward=1.77, length=148
+Finished episode 1540 | reward=0.80, length=123
+Finished episode 1550 | reward=1.39, length=112
+Finished episode 1560 | reward=1.31, length=128
+Finished episode 1570 | reward=1.38, length=168
+Finished episode 1580 | reward=0.87, length=114
+Finished episode 1590 | reward=-0.06, length=87
+Finished episode 1600 | reward=0.53, length=141
+Episode 1600/6000 - Epsilon: 0.050, Q-table: 19581 states
+Finished episode 1610 | reward=0.66, length=124
+Finished episode 1620 | reward=1.49, length=127
+Finished episode 1630 | reward=1.56, length=127
+Finished episode 1640 | reward=0.72, length=143
+Finished episode 1650 | reward=1.32, length=129
+Finished episode 1660 | reward=0.77, length=122
+Finished episode 1670 | reward=1.15, length=131
+Finished episode 1680 | reward=0.82, length=141
+Finished episode 1690 | reward=1.51, length=93
+Finished episode 1700 | reward=1.86, length=184
+Episode 1700/6000 - Epsilon: 0.050, Q-table: 20191 states
+Finished episode 1710 | reward=1.06, length=144
+Finished episode 1720 | reward=0.63, length=119
+Finished episode 1730 | reward=1.25, length=124
+Finished episode 1740 | reward=1.89, length=100
+Finished episode 1750 | reward=0.59, length=150
+Finished episode 1760 | reward=1.33, length=153
+Finished episode 1770 | reward=0.97, length=116
+Finished episode 1780 | reward=0.57, length=147
+Finished episode 1790 | reward=0.40, length=118
+Finished episode 1800 | reward=1.06, length=133
+Episode 1800/6000 - Epsilon: 0.050, Q-table: 20744 states
+Finished episode 1810 | reward=1.39, length=138
+Finished episode 1820 | reward=0.80, length=121
+Finished episode 1830 | reward=1.33, length=143
+Finished episode 1840 | reward=1.37, length=110
+Finished episode 1850 | reward=0.96, length=135
+Finished episode 1860 | reward=0.92, length=133
+Finished episode 1870 | reward=0.83, length=112
+Finished episode 1880 | reward=0.97, length=108
+Finished episode 1890 | reward=1.51, length=152
+Finished episode 1900 | reward=1.09, length=114
+Episode 1900/6000 - Epsilon: 0.050, Q-table: 21305 states
+Finished episode 1910 | reward=0.41, length=166
+Finished episode 1920 | reward=0.75, length=126
+Finished episode 1930 | reward=1.06, length=124
+Finished episode 1940 | reward=0.80, length=130
+Finished episode 1950 | reward=1.02, length=131
+Finished episode 1960 | reward=0.85, length=151
+Finished episode 1970 | reward=1.82, length=120
+Finished episode 1980 | reward=0.28, length=135
+Finished episode 1990 | reward=1.29, length=140
+Finished episode 2000 | reward=0.78, length=141
+Evaluation: 30/50 wins (60.0%)
+  Avg Reward: 1.21
+  Unknown States: 0.0% (0/53)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 2000/6000
+  Avg Reward: 1.09, Avg Length: 129.1
+  Win Rate: 60.0%, Epsilon: 0.050
+  Q-table size: 22085
+  Overall Win Rate: 38.3%
+------------------------------------------------------------
+Finished episode 2010 | reward=1.54, length=129
+Finished episode 2020 | reward=0.17, length=146
+Finished episode 2030 | reward=1.05, length=117
+Finished episode 2040 | reward=0.57, length=154
+Finished episode 2050 | reward=-0.05, length=109
+Finished episode 2060 | reward=1.20, length=130
+Finished episode 2070 | reward=1.73, length=114
+Finished episode 2080 | reward=0.85, length=123
+Finished episode 2090 | reward=0.36, length=99
+Finished episode 2100 | reward=1.56, length=77
+Episode 2100/6000 - Epsilon: 0.050, Q-table: 22632 states
+Finished episode 2110 | reward=1.88, length=132
+Finished episode 2120 | reward=0.59, length=120
+Finished episode 2130 | reward=0.70, length=117
+Finished episode 2140 | reward=1.03, length=120
+Finished episode 2150 | reward=1.04, length=140
+Finished episode 2160 | reward=1.61, length=157
+Finished episode 2170 | reward=0.87, length=131
+Finished episode 2180 | reward=0.55, length=128
+Finished episode 2190 | reward=1.54, length=111
+Finished episode 2200 | reward=1.01, length=143
+Episode 2200/6000 - Epsilon: 0.050, Q-table: 23178 states
+Finished episode 2210 | reward=0.41, length=119
+Finished episode 2220 | reward=1.63, length=118
+Finished episode 2230 | reward=1.25, length=131
+Finished episode 2240 | reward=1.59, length=134
+Finished episode 2250 | reward=1.63, length=107
+Finished episode 2260 | reward=0.09, length=140
+Finished episode 2270 | reward=0.86, length=115
+Finished episode 2280 | reward=1.65, length=133
+Finished episode 2290 | reward=1.20, length=121
+Finished episode 2300 | reward=0.83, length=103
+Episode 2300/6000 - Epsilon: 0.050, Q-table: 23660 states
+Finished episode 2310 | reward=1.24, length=121
+Finished episode 2320 | reward=1.62, length=119
+Finished episode 2330 | reward=0.64, length=122
+Finished episode 2340 | reward=1.43, length=134
+Finished episode 2350 | reward=1.08, length=158
+Finished episode 2360 | reward=1.75, length=108
+Finished episode 2370 | reward=0.84, length=127
+Finished episode 2380 | reward=2.12, length=77
+Finished episode 2390 | reward=0.98, length=127
+Finished episode 2400 | reward=1.63, length=103
+Episode 2400/6000 - Epsilon: 0.050, Q-table: 24126 states
+Finished episode 2410 | reward=0.72, length=127
+Finished episode 2420 | reward=1.06, length=146
+Finished episode 2430 | reward=0.86, length=131
+Finished episode 2440 | reward=1.61, length=143
+Finished episode 2450 | reward=0.87, length=123
+Finished episode 2460 | reward=1.88, length=123
+Finished episode 2470 | reward=1.32, length=113
+Finished episode 2480 | reward=0.72, length=159
+Finished episode 2490 | reward=0.83, length=170
+Finished episode 2500 | reward=0.96, length=116
+Evaluation: 16/50 wins (32.0%)
+  Avg Reward: 0.95
+  Unknown States: 0.0% (0/48)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 2500/6000
+  Avg Reward: 1.09, Avg Length: 127.8
+  Win Rate: 32.0%, Epsilon: 0.050
+  Q-table size: 24809
+  Overall Win Rate: 39.4%
+------------------------------------------------------------
+Finished episode 2510 | reward=1.56, length=114
+Finished episode 2520 | reward=0.83, length=154
+Finished episode 2530 | reward=0.62, length=113
+Finished episode 2540 | reward=0.57, length=144
+Finished episode 2550 | reward=1.41, length=129
+Finished episode 2560 | reward=0.55, length=112
+Finished episode 2570 | reward=0.72, length=135
+Finished episode 2580 | reward=0.98, length=117
+Finished episode 2590 | reward=1.45, length=113
+Finished episode 2600 | reward=0.63, length=115
+Episode 2600/6000 - Epsilon: 0.050, Q-table: 25324 states
+Finished episode 2610 | reward=0.33, length=121
+Finished episode 2620 | reward=1.46, length=100
+Finished episode 2630 | reward=1.40, length=107
+Finished episode 2640 | reward=0.52, length=123
+Finished episode 2650 | reward=1.24, length=112
+Finished episode 2660 | reward=0.62, length=110
+Finished episode 2670 | reward=1.45, length=129
+Finished episode 2680 | reward=0.76, length=100
+Finished episode 2690 | reward=0.89, length=138
+Finished episode 2700 | reward=1.53, length=138
+Episode 2700/6000 - Epsilon: 0.050, Q-table: 25759 states
+Finished episode 2710 | reward=1.65, length=120
+Finished episode 2720 | reward=0.52, length=138
+Finished episode 2730 | reward=1.32, length=143
+Finished episode 2740 | reward=1.08, length=139
+Finished episode 2750 | reward=1.54, length=132
+Finished episode 2760 | reward=0.89, length=118
+Finished episode 2770 | reward=0.30, length=118
+Finished episode 2780 | reward=1.22, length=102
+Finished episode 2790 | reward=0.17, length=121
+Finished episode 2800 | reward=0.93, length=129
+Episode 2800/6000 - Epsilon: 0.050, Q-table: 26199 states
+Finished episode 2810 | reward=0.67, length=138
+Finished episode 2820 | reward=0.79, length=137
+Finished episode 2830 | reward=1.77, length=112
+Finished episode 2840 | reward=0.22, length=147
+Finished episode 2850 | reward=1.60, length=165
+Finished episode 2860 | reward=0.97, length=137
+Finished episode 2870 | reward=0.29, length=139
+Finished episode 2880 | reward=1.73, length=127
+Finished episode 2890 | reward=0.33, length=151
+Finished episode 2900 | reward=1.05, length=124
+Episode 2900/6000 - Epsilon: 0.050, Q-table: 26612 states
+Finished episode 2910 | reward=0.55, length=128
+Finished episode 2920 | reward=1.31, length=119
+Finished episode 2930 | reward=1.47, length=129
+Finished episode 2940 | reward=0.64, length=147
+Finished episode 2950 | reward=1.89, length=107
+Finished episode 2960 | reward=1.44, length=165
+Finished episode 2970 | reward=0.93, length=102
+Finished episode 2980 | reward=0.94, length=154
+Finished episode 2990 | reward=0.74, length=133
+Finished episode 3000 | reward=0.90, length=111
+Evaluation: 19/50 wins (38.0%)
+  Avg Reward: 1.07
+  Unknown States: 0.0% (0/50)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 3000/6000
+  Avg Reward: 1.07, Avg Length: 127.6
+  Win Rate: 38.0%, Epsilon: 0.050
+  Q-table size: 27171
+  Overall Win Rate: 39.4%
+------------------------------------------------------------
+Finished episode 3010 | reward=1.55, length=105
+Finished episode 3020 | reward=0.79, length=144
+Finished episode 3030 | reward=0.58, length=121
+Finished episode 3040 | reward=0.96, length=127
+Finished episode 3050 | reward=1.00, length=128
+Finished episode 3060 | reward=1.54, length=143
+Finished episode 3070 | reward=0.50, length=149
+Finished episode 3080 | reward=1.55, length=116
+Finished episode 3090 | reward=0.65, length=95
+Finished episode 3100 | reward=0.27, length=157
+Episode 3100/6000 - Epsilon: 0.050, Q-table: 27579 states
+Finished episode 3110 | reward=0.81, length=139
+Finished episode 3120 | reward=1.58, length=116
+Finished episode 3130 | reward=0.69, length=131
+Finished episode 3140 | reward=0.85, length=122
+Finished episode 3150 | reward=1.25, length=122
+Finished episode 3160 | reward=1.12, length=129
+Finished episode 3170 | reward=1.74, length=101
+Finished episode 3180 | reward=0.83, length=119
+Finished episode 3190 | reward=0.72, length=131
+Finished episode 3200 | reward=0.50, length=130
+Episode 3200/6000 - Epsilon: 0.050, Q-table: 27991 states
+Finished episode 3210 | reward=1.64, length=116
+Finished episode 3220 | reward=1.57, length=154
+Finished episode 3230 | reward=0.66, length=124
+Finished episode 3240 | reward=0.69, length=146
+Finished episode 3250 | reward=0.41, length=100
+Finished episode 3260 | reward=1.53, length=135
+Finished episode 3270 | reward=1.75, length=109
+Finished episode 3280 | reward=0.72, length=119
+Finished episode 3290 | reward=1.45, length=128
+Finished episode 3300 | reward=0.92, length=121
+Episode 3300/6000 - Epsilon: 0.050, Q-table: 28342 states
+Finished episode 3310 | reward=0.82, length=128
+Finished episode 3320 | reward=0.72, length=131
+Finished episode 3330 | reward=0.79, length=117
+Finished episode 3340 | reward=0.64, length=122
+Finished episode 3350 | reward=1.45, length=122
+Finished episode 3360 | reward=1.20, length=120
+Finished episode 3370 | reward=0.61, length=145
+Finished episode 3380 | reward=0.55, length=117
+Finished episode 3390 | reward=1.78, length=137
+Finished episode 3400 | reward=0.08, length=135
+Episode 3400/6000 - Epsilon: 0.050, Q-table: 28753 states
+Finished episode 3410 | reward=0.75, length=142
+Finished episode 3420 | reward=0.82, length=122
+Finished episode 3430 | reward=1.94, length=110
+Finished episode 3440 | reward=1.40, length=123
+Finished episode 3450 | reward=1.59, length=131
+Finished episode 3460 | reward=1.57, length=123
+Finished episode 3470 | reward=1.42, length=126
+Finished episode 3480 | reward=0.73, length=148
+Finished episode 3490 | reward=1.34, length=139
+Finished episode 3500 | reward=1.62, length=129
+Evaluation: 24/50 wins (48.0%)
+  Avg Reward: 1.14
+  Unknown States: 0.0% (0/43)
+  Avg Q(HIT): 0.05, Avg Q(STAY): 0.05
+Episode 3500/6000
+  Avg Reward: 1.06, Avg Length: 127.0
+  Win Rate: 48.0%, Epsilon: 0.050
+  Q-table size: 29306
+  Overall Win Rate: 39.6%
+------------------------------------------------------------
+Finished episode 3510 | reward=1.06, length=118
+Finished episode 3520 | reward=0.83, length=125
+Finished episode 3530 | reward=1.39, length=121
+Finished episode 3540 | reward=1.48, length=114
+Finished episode 3550 | reward=1.94, length=118
+Finished episode 3560 | reward=0.97, length=149
+Finished episode 3570 | reward=0.83, length=143
+Finished episode 3580 | reward=1.02, length=118
+Finished episode 3590 | reward=1.83, length=106
+Finished episode 3600 | reward=0.53, length=153
+Episode 3600/6000 - Epsilon: 0.050, Q-table: 29678 states
+Finished episode 3610 | reward=0.68, length=121
+Finished episode 3620 | reward=0.86, length=152
+Finished episode 3630 | reward=1.29, length=123
+Finished episode 3640 | reward=0.72, length=153
+Finished episode 3650 | reward=1.11, length=156
+Finished episode 3660 | reward=0.75, length=117
+Finished episode 3670 | reward=0.97, length=136
+Finished episode 3680 | reward=1.35, length=131
+Finished episode 3690 | reward=0.49, length=127
+Finished episode 3700 | reward=1.62, length=121
+Episode 3700/6000 - Epsilon: 0.050, Q-table: 30010 states
+Finished episode 3710 | reward=1.56, length=146
+Finished episode 3720 | reward=1.41, length=125
+Finished episode 3730 | reward=1.79, length=109
+Finished episode 3740 | reward=1.95, length=121
+Finished episode 3750 | reward=0.83, length=116
+Finished episode 3760 | reward=1.31, length=121
+Finished episode 3770 | reward=1.30, length=120
+Finished episode 3780 | reward=1.58, length=122
+Finished episode 3790 | reward=0.66, length=158
+Finished episode 3800 | reward=1.66, length=90
+Episode 3800/6000 - Epsilon: 0.050, Q-table: 30378 states
+Finished episode 3810 | reward=0.95, length=126
+Finished episode 3820 | reward=0.91, length=137
+Finished episode 3830 | reward=0.50, length=103
+Finished episode 3840 | reward=1.51, length=148
+Finished episode 3850 | reward=0.16, length=205
+Finished episode 3860 | reward=1.90, length=121
+Finished episode 3870 | reward=1.38, length=148
+Finished episode 3880 | reward=0.56, length=121
+Finished episode 3890 | reward=0.81, length=112
+Finished episode 3900 | reward=0.37, length=115
+Episode 3900/6000 - Epsilon: 0.050, Q-table: 30717 states
+Finished episode 3910 | reward=1.82, length=103
+Finished episode 3920 | reward=0.80, length=145
+Finished episode 3930 | reward=1.08, length=144
+Finished episode 3940 | reward=1.55, length=113
+Finished episode 3950 | reward=0.56, length=141
+Finished episode 3960 | reward=0.70, length=137
+Finished episode 3970 | reward=1.10, length=101
+Finished episode 3980 | reward=1.99, length=129
+Finished episode 3990 | reward=0.61, length=127
+Finished episode 4000 | reward=0.98, length=124
+Evaluation: 24/50 wins (48.0%)
+  Avg Reward: 1.05
+  Unknown States: 0.0% (0/43)
+  Avg Q(HIT): 0.05, Avg Q(STAY): 0.06
+Episode 4000/6000
+  Avg Reward: 1.04, Avg Length: 126.6
+  Win Rate: 48.0%, Epsilon: 0.050
+  Q-table size: 31223
+  Overall Win Rate: 39.4%
+------------------------------------------------------------
+Finished episode 4010 | reward=1.61, length=124
+Finished episode 4020 | reward=0.80, length=141
+Finished episode 4030 | reward=0.83, length=107
+Finished episode 4040 | reward=1.23, length=126
+Finished episode 4050 | reward=0.73, length=138
+Finished episode 4060 | reward=1.00, length=141
+Finished episode 4070 | reward=0.27, length=120
+Finished episode 4080 | reward=0.90, length=129
+Finished episode 4090 | reward=0.16, length=128
+Finished episode 4100 | reward=0.05, length=136
+Episode 4100/6000 - Epsilon: 0.050, Q-table: 31540 states
+Finished episode 4110 | reward=0.28, length=143
+Finished episode 4120 | reward=0.91, length=156
+Finished episode 4130 | reward=0.46, length=123
+Finished episode 4140 | reward=1.17, length=156
+Finished episode 4150 | reward=1.13, length=143
+Finished episode 4160 | reward=1.28, length=158
+Finished episode 4170 | reward=0.56, length=129
+Finished episode 4180 | reward=1.90, length=97
+Finished episode 4190 | reward=0.11, length=115
+Finished episode 4200 | reward=0.97, length=113
+Episode 4200/6000 - Epsilon: 0.050, Q-table: 31835 states
+Finished episode 4210 | reward=0.55, length=129
+Finished episode 4220 | reward=1.14, length=121
+Finished episode 4230 | reward=1.32, length=114
+Finished episode 4240 | reward=0.77, length=144
+Finished episode 4250 | reward=0.39, length=140
+Finished episode 4260 | reward=0.93, length=130
+Finished episode 4270 | reward=0.80, length=121
+Finished episode 4280 | reward=2.01, length=119
+Finished episode 4290 | reward=0.59, length=133
+Finished episode 4300 | reward=0.90, length=122
+Episode 4300/6000 - Epsilon: 0.050, Q-table: 32164 states
+Finished episode 4310 | reward=1.06, length=116
+Finished episode 4320 | reward=0.13, length=141
+Finished episode 4330 | reward=0.74, length=132
+Finished episode 4340 | reward=1.55, length=128
+Finished episode 4350 | reward=0.85, length=106
+Finished episode 4360 | reward=1.37, length=124
+Finished episode 4370 | reward=0.83, length=145
+Finished episode 4380 | reward=0.38, length=126
+Finished episode 4390 | reward=1.48, length=100
+Finished episode 4400 | reward=1.41, length=133
+Episode 4400/6000 - Epsilon: 0.050, Q-table: 32485 states
+Finished episode 4410 | reward=0.72, length=129
+Finished episode 4420 | reward=0.79, length=146
+Finished episode 4430 | reward=1.62, length=133
+Finished episode 4440 | reward=0.89, length=119
+Finished episode 4450 | reward=0.95, length=97
+Finished episode 4460 | reward=1.68, length=122
+Finished episode 4470 | reward=0.41, length=147
+Finished episode 4480 | reward=1.50, length=127
+Finished episode 4490 | reward=1.63, length=96
+Finished episode 4500 | reward=0.89, length=137
+Evaluation: 26/50 wins (52.0%)
+  Avg Reward: 1.18
+  Unknown States: 0.0% (0/46)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 4500/6000
+  Avg Reward: 1.07, Avg Length: 126.7
+  Win Rate: 52.0%, Epsilon: 0.050
+  Q-table size: 32990
+  Overall Win Rate: 39.5%
+------------------------------------------------------------
+Finished episode 4510 | reward=0.65, length=130
+Finished episode 4520 | reward=0.28, length=118
+Finished episode 4530 | reward=0.65, length=125
+Finished episode 4540 | reward=0.63, length=130
+Finished episode 4550 | reward=0.82, length=113
+Finished episode 4560 | reward=1.61, length=127
+Finished episode 4570 | reward=1.20, length=133
+Finished episode 4580 | reward=1.26, length=135
+Finished episode 4590 | reward=1.18, length=118
+Finished episode 4600 | reward=1.06, length=124
+Episode 4600/6000 - Epsilon: 0.050, Q-table: 33343 states
+Finished episode 4610 | reward=0.43, length=127
+Finished episode 4620 | reward=0.60, length=155
+Finished episode 4630 | reward=0.35, length=103
+Finished episode 4640 | reward=1.89, length=115
+Finished episode 4650 | reward=1.92, length=125
+Finished episode 4660 | reward=1.74, length=132
+Finished episode 4670 | reward=0.47, length=110
+Finished episode 4680 | reward=0.65, length=144
+Finished episode 4690 | reward=1.62, length=120
+Finished episode 4700 | reward=0.44, length=122
+Episode 4700/6000 - Epsilon: 0.050, Q-table: 33700 states
+Finished episode 4710 | reward=0.93, length=124
+Finished episode 4720 | reward=1.31, length=147
+Finished episode 4730 | reward=1.63, length=125
+Finished episode 4740 | reward=0.87, length=133
+Finished episode 4750 | reward=1.32, length=134
+Finished episode 4760 | reward=0.55, length=98
+Finished episode 4770 | reward=1.64, length=115
+Finished episode 4780 | reward=0.96, length=112
+Finished episode 4790 | reward=0.82, length=127
+Finished episode 4800 | reward=-0.26, length=128
+Episode 4800/6000 - Epsilon: 0.050, Q-table: 33995 states
+Finished episode 4810 | reward=1.76, length=132
+Finished episode 4820 | reward=0.44, length=136
+Finished episode 4830 | reward=0.89, length=112
+Finished episode 4840 | reward=1.66, length=115
+Finished episode 4850 | reward=0.75, length=105
+Finished episode 4860 | reward=1.13, length=136
+Finished episode 4870 | reward=1.30, length=146
+Finished episode 4880 | reward=1.13, length=128
+Finished episode 4890 | reward=0.93, length=112
+Finished episode 4900 | reward=1.33, length=142
+Episode 4900/6000 - Epsilon: 0.050, Q-table: 34257 states
+Finished episode 4910 | reward=1.21, length=122
+Finished episode 4920 | reward=0.94, length=104
+Finished episode 4930 | reward=1.34, length=124
+Finished episode 4940 | reward=0.49, length=125
+Finished episode 4950 | reward=0.82, length=129
+Finished episode 4960 | reward=0.86, length=107
+Finished episode 4970 | reward=1.41, length=114
+Finished episode 4980 | reward=0.91, length=108
+Finished episode 4990 | reward=0.69, length=120
+Finished episode 5000 | reward=1.68, length=117
+Evaluation: 18/50 wins (36.0%)
+  Avg Reward: 1.03
+  Unknown States: 0.0% (0/44)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 5000/6000
+  Avg Reward: 1.04, Avg Length: 126.1
+  Win Rate: 36.0%, Epsilon: 0.050
+  Q-table size: 34685
+  Overall Win Rate: 39.1%
+------------------------------------------------------------
+Finished episode 5010 | reward=1.88, length=109
+Finished episode 5020 | reward=0.70, length=142
+Finished episode 5030 | reward=1.81, length=99
+Finished episode 5040 | reward=0.67, length=134
+Finished episode 5050 | reward=0.75, length=120
+Finished episode 5060 | reward=0.54, length=148
+Finished episode 5070 | reward=0.25, length=151
+Finished episode 5080 | reward=0.86, length=117
+Finished episode 5090 | reward=1.69, length=109
+Finished episode 5100 | reward=2.14, length=117
+Episode 5100/6000 - Epsilon: 0.050, Q-table: 34982 states
+Finished episode 5110 | reward=0.81, length=106
+Finished episode 5120 | reward=1.14, length=105
+Finished episode 5130 | reward=0.84, length=132
+Finished episode 5140 | reward=1.12, length=116
+Finished episode 5150 | reward=0.54, length=116
+Finished episode 5160 | reward=0.69, length=114
+Finished episode 5170 | reward=0.75, length=129
+Finished episode 5180 | reward=0.76, length=119
+Finished episode 5190 | reward=1.43, length=123
+Finished episode 5200 | reward=0.78, length=116
+Episode 5200/6000 - Epsilon: 0.050, Q-table: 35238 states
+Finished episode 5210 | reward=1.25, length=120
+Finished episode 5220 | reward=1.21, length=204
+Finished episode 5230 | reward=0.77, length=136
+Finished episode 5240 | reward=0.41, length=155
+Finished episode 5250 | reward=1.76, length=100
+Finished episode 5260 | reward=1.47, length=135
+Finished episode 5270 | reward=1.72, length=113
+Finished episode 5280 | reward=1.85, length=131
+Finished episode 5290 | reward=1.12, length=122
+Finished episode 5300 | reward=1.72, length=115
+Episode 5300/6000 - Epsilon: 0.050, Q-table: 35536 states
+Finished episode 5310 | reward=0.85, length=147
+Finished episode 5320 | reward=0.60, length=154
+Finished episode 5330 | reward=1.12, length=141
+Finished episode 5340 | reward=0.59, length=140
+Finished episode 5350 | reward=1.18, length=125
+Finished episode 5360 | reward=0.99, length=130
+Finished episode 5370 | reward=0.38, length=125
+Finished episode 5380 | reward=0.49, length=132
+Finished episode 5390 | reward=1.71, length=119
+Finished episode 5400 | reward=0.67, length=143
+Episode 5400/6000 - Epsilon: 0.050, Q-table: 35831 states
+Finished episode 5410 | reward=1.28, length=132
+Finished episode 5420 | reward=0.47, length=116
+Finished episode 5430 | reward=1.52, length=115
+Finished episode 5440 | reward=1.44, length=114
+Finished episode 5450 | reward=0.91, length=123
+Finished episode 5460 | reward=0.83, length=126
+Finished episode 5470 | reward=1.33, length=107
+Finished episode 5480 | reward=1.16, length=129
+Finished episode 5490 | reward=1.19, length=103
+Finished episode 5500 | reward=0.81, length=152
+Evaluation: 15/50 wins (30.0%)
+  Avg Reward: 1.01
+  Unknown States: 0.0% (0/45)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 5500/6000
+  Avg Reward: 1.02, Avg Length: 126.7
+  Win Rate: 30.0%, Epsilon: 0.050
+  Q-table size: 36247
+  Overall Win Rate: 38.8%
+------------------------------------------------------------
+Finished episode 5510 | reward=1.13, length=130
+Finished episode 5520 | reward=0.45, length=125
+Finished episode 5530 | reward=0.68, length=130
+Finished episode 5540 | reward=1.47, length=139
+Finished episode 5550 | reward=0.62, length=139
+Finished episode 5560 | reward=1.07, length=118
+Finished episode 5570 | reward=0.90, length=118
+Finished episode 5580 | reward=0.66, length=140
+Finished episode 5590 | reward=0.51, length=148
+Finished episode 5600 | reward=1.34, length=98
+Episode 5600/6000 - Epsilon: 0.050, Q-table: 36484 states
+Finished episode 5610 | reward=0.80, length=136
+Finished episode 5620 | reward=1.29, length=131
+Finished episode 5630 | reward=1.43, length=140
+Finished episode 5640 | reward=1.16, length=109
+Finished episode 5650 | reward=1.77, length=127
+Finished episode 5660 | reward=0.81, length=101
+Finished episode 5670 | reward=1.39, length=131
+Finished episode 5680 | reward=1.57, length=137
+Finished episode 5690 | reward=2.31, length=116
+Finished episode 5700 | reward=1.06, length=124
+Episode 5700/6000 - Epsilon: 0.050, Q-table: 36765 states
+Finished episode 5710 | reward=0.98, length=136
+Finished episode 5720 | reward=0.82, length=117
+Finished episode 5730 | reward=1.55, length=112
+Finished episode 5740 | reward=0.61, length=120
+Finished episode 5750 | reward=0.55, length=133
+Finished episode 5760 | reward=0.85, length=123
+Finished episode 5770 | reward=1.35, length=140
+Finished episode 5780 | reward=0.97, length=140
+Finished episode 5790 | reward=1.45, length=107
+Finished episode 5800 | reward=0.29, length=147
+Episode 5800/6000 - Epsilon: 0.050, Q-table: 37060 states
+Finished episode 5810 | reward=1.60, length=115
+Finished episode 5820 | reward=0.59, length=125
+Finished episode 5830 | reward=0.57, length=117
+Finished episode 5840 | reward=0.92, length=112
+Finished episode 5850 | reward=1.41, length=102
+Finished episode 5860 | reward=0.21, length=129
+Finished episode 5870 | reward=0.96, length=110
+Finished episode 5880 | reward=1.53, length=129
+Finished episode 5890 | reward=0.67, length=139
+Finished episode 5900 | reward=0.82, length=144
+Episode 5900/6000 - Epsilon: 0.050, Q-table: 37336 states
+Finished episode 5910 | reward=1.38, length=123
+Finished episode 5920 | reward=1.06, length=111
+Finished episode 5930 | reward=1.65, length=139
+Finished episode 5940 | reward=0.66, length=108
+Finished episode 5950 | reward=1.96, length=124
+Finished episode 5960 | reward=0.38, length=137
+Finished episode 5970 | reward=1.57, length=118
+Finished episode 5980 | reward=0.59, length=115
+Finished episode 5990 | reward=1.39, length=131
+Finished episode 6000 | reward=0.68, length=123
+Evaluation: 17/50 wins (34.0%)
+  Avg Reward: 1.06
+  Unknown States: 0.0% (0/45)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 6000/6000
+  Avg Reward: 1.04, Avg Length: 126.0
+  Win Rate: 34.0%, Epsilon: 0.050
+  Q-table size: 37701
+  Overall Win Rate: 38.8%
+------------------------------------------------------------
+
+Training completed in 21.2 seconds
+Final epsilon: 0.050
+Final Q-table size: 37701 states
+Overall win rate: 38.8%
+
+======================================================================
+STAGE 2: Training against Conservative opponents
+======================================================================
+Adjusted learning rate to 0.019 for Stage 2
+Starting training for 8000 episodes...
+Initial epsilon: 0.050
+Learning rate: 0.018656148608856594, Discount: 0.9
+------------------------------------------------------------
+Finished episode 10 | reward=1.80, length=256
+Finished episode 20 | reward=1.14, length=126
+Finished episode 30 | reward=1.97, length=153
+Finished episode 40 | reward=1.64, length=222
+Finished episode 50 | reward=2.16, length=227
+Finished episode 60 | reward=1.25, length=199
+Finished episode 70 | reward=1.87, length=138
+Finished episode 80 | reward=1.81, length=233
+Finished episode 90 | reward=2.20, length=263
+Finished episode 100 | reward=1.17, length=191
+Episode 100/8000 - Epsilon: 0.050, Q-table: 38317 states
+Finished episode 110 | reward=1.66, length=172
+Finished episode 120 | reward=1.93, length=276
+Finished episode 130 | reward=1.96, length=218
+Finished episode 140 | reward=2.25, length=251
+Finished episode 150 | reward=0.79, length=185
+Finished episode 160 | reward=1.88, length=249
+Finished episode 170 | reward=2.25, length=156
+Finished episode 180 | reward=1.98, length=180
+Finished episode 190 | reward=0.56, length=127
+Finished episode 200 | reward=1.62, length=217
+Episode 200/8000 - Epsilon: 0.050, Q-table: 38890 states
+Finished episode 210 | reward=0.89, length=204
+Finished episode 220 | reward=2.13, length=269
+Finished episode 230 | reward=2.10, length=164
+Finished episode 240 | reward=1.14, length=240
+Finished episode 250 | reward=0.52, length=96
+Finished episode 260 | reward=1.94, length=181
+Finished episode 270 | reward=2.12, length=131
+Finished episode 280 | reward=1.16, length=162
+Finished episode 290 | reward=2.10, length=165
+Finished episode 300 | reward=2.26, length=115
+Episode 300/8000 - Epsilon: 0.050, Q-table: 39428 states
+Finished episode 310 | reward=1.45, length=175
+Finished episode 320 | reward=2.11, length=285
+Finished episode 330 | reward=1.19, length=140
+Finished episode 340 | reward=1.98, length=265
+Finished episode 350 | reward=1.91, length=245
+Finished episode 360 | reward=1.88, length=228
+Finished episode 370 | reward=1.23, length=148
+Finished episode 380 | reward=1.02, length=289
+Finished episode 390 | reward=2.01, length=183
+Finished episode 400 | reward=2.35, length=192
+Episode 400/8000 - Epsilon: 0.050, Q-table: 39881 states
+Finished episode 410 | reward=1.29, length=297
+Finished episode 420 | reward=1.63, length=319
+Finished episode 430 | reward=0.99, length=206
+Finished episode 440 | reward=1.56, length=171
+Finished episode 450 | reward=1.95, length=237
+Finished episode 460 | reward=2.30, length=150
+Finished episode 470 | reward=1.85, length=188
+Finished episode 480 | reward=0.59, length=126
+Finished episode 490 | reward=1.79, length=185
+Finished episode 500 | reward=1.94, length=183
+Evaluation: 28/50 wins (56.0%)
+  Avg Reward: 1.43
+  Unknown States: 0.0% (0/50)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 500/8000
+  Avg Reward: 1.53, Avg Length: 188.7
+  Win Rate: 56.0%, Epsilon: 0.050
+  Q-table size: 40518
+  Overall Win Rate: 59.0%
+------------------------------------------------------------
+Finished episode 510 | reward=2.14, length=167
+Finished episode 520 | reward=1.93, length=224
+Finished episode 530 | reward=1.62, length=208
+Finished episode 540 | reward=2.36, length=196
+Finished episode 550 | reward=2.10, length=218
+Finished episode 560 | reward=0.68, length=160
+Finished episode 570 | reward=2.15, length=237
+Finished episode 580 | reward=0.79, length=163
+Finished episode 590 | reward=1.45, length=146
+Finished episode 600 | reward=1.84, length=229
+Episode 600/8000 - Epsilon: 0.050, Q-table: 40947 states
+Finished episode 610 | reward=1.58, length=277
+Finished episode 620 | reward=1.94, length=192
+Finished episode 630 | reward=1.18, length=231
+Finished episode 640 | reward=2.01, length=215
+Finished episode 650 | reward=2.09, length=187
+Finished episode 660 | reward=1.93, length=221
+Finished episode 670 | reward=1.69, length=292
+Finished episode 680 | reward=0.99, length=230
+Finished episode 690 | reward=1.95, length=189
+Finished episode 700 | reward=0.98, length=193
+Episode 700/8000 - Epsilon: 0.050, Q-table: 41347 states
+Finished episode 710 | reward=1.46, length=252
+Finished episode 720 | reward=1.84, length=201
+Finished episode 730 | reward=2.19, length=202
+Finished episode 740 | reward=1.79, length=184
+Finished episode 750 | reward=1.66, length=214
+Finished episode 760 | reward=1.98, length=124
+Finished episode 770 | reward=1.31, length=218
+Finished episode 780 | reward=1.96, length=253
+Finished episode 790 | reward=2.12, length=164
+Finished episode 800 | reward=1.33, length=166
+Episode 800/8000 - Epsilon: 0.050, Q-table: 41747 states
+Finished episode 810 | reward=2.16, length=161
+Finished episode 820 | reward=1.86, length=216
+Finished episode 830 | reward=0.11, length=111
+Finished episode 840 | reward=1.32, length=176
+Finished episode 850 | reward=1.46, length=213
+Finished episode 860 | reward=1.32, length=170
+Finished episode 870 | reward=1.31, length=160
+Finished episode 880 | reward=0.51, length=85
+Finished episode 890 | reward=1.27, length=300
+Finished episode 900 | reward=2.06, length=126
+Episode 900/8000 - Epsilon: 0.050, Q-table: 42144 states
+Finished episode 910 | reward=1.90, length=331
+Finished episode 920 | reward=1.98, length=212
+Finished episode 930 | reward=0.99, length=121
+Finished episode 940 | reward=0.97, length=97
+Finished episode 950 | reward=1.31, length=171
+Finished episode 960 | reward=2.04, length=204
+Finished episode 970 | reward=1.10, length=213
+Finished episode 980 | reward=2.25, length=254
+Finished episode 990 | reward=0.33, length=116
+Finished episode 1000 | reward=1.82, length=169
+Evaluation: 29/50 wins (58.0%)
+  Avg Reward: 1.49
+  Unknown States: 0.0% (0/46)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.05
+Episode 1000/8000
+  Avg Reward: 1.56, Avg Length: 188.5
+  Win Rate: 58.0%, Epsilon: 0.050
+  Q-table size: 42718
+  Overall Win Rate: 58.7%
+------------------------------------------------------------
+Finished episode 1010 | reward=1.79, length=184
+Finished episode 1020 | reward=1.91, length=154
+Finished episode 1030 | reward=2.27, length=179
+Finished episode 1040 | reward=2.41, length=170
+Finished episode 1050 | reward=1.39, length=166
+Finished episode 1060 | reward=1.79, length=205
+Finished episode 1070 | reward=1.27, length=177
+Finished episode 1080 | reward=1.04, length=202
+Finished episode 1090 | reward=1.99, length=171
+Finished episode 1100 | reward=2.18, length=122
+Episode 1100/8000 - Epsilon: 0.050, Q-table: 43063 states
+Finished episode 1110 | reward=2.17, length=190
+Finished episode 1120 | reward=2.12, length=182
+Finished episode 1130 | reward=1.79, length=229
+Finished episode 1140 | reward=0.91, length=219
+Finished episode 1150 | reward=1.43, length=187
+Finished episode 1160 | reward=1.69, length=216
+Finished episode 1170 | reward=1.84, length=160
+Finished episode 1180 | reward=1.99, length=265
+Finished episode 1190 | reward=0.38, length=120
+Finished episode 1200 | reward=1.82, length=209
+Episode 1200/8000 - Epsilon: 0.050, Q-table: 43456 states
+Finished episode 1210 | reward=2.03, length=224
+Finished episode 1220 | reward=2.17, length=147
+Finished episode 1230 | reward=1.86, length=203
+Finished episode 1240 | reward=0.52, length=104
+Finished episode 1250 | reward=1.17, length=145
+Finished episode 1260 | reward=2.03, length=179
+Finished episode 1270 | reward=2.19, length=175
+Finished episode 1280 | reward=0.40, length=192
+Finished episode 1290 | reward=1.99, length=171
+Finished episode 1300 | reward=1.89, length=189
+Episode 1300/8000 - Epsilon: 0.050, Q-table: 43782 states
+Finished episode 1310 | reward=0.74, length=183
+Finished episode 1320 | reward=2.35, length=205
+Finished episode 1330 | reward=2.04, length=189
+Finished episode 1340 | reward=2.30, length=202
+Finished episode 1350 | reward=1.27, length=182
+Finished episode 1360 | reward=0.87, length=215
+Finished episode 1370 | reward=1.68, length=204
+Finished episode 1380 | reward=0.00, length=31
+Finished episode 1390 | reward=2.33, length=151
+Finished episode 1400 | reward=2.09, length=161
+Episode 1400/8000 - Epsilon: 0.050, Q-table: 44154 states
+Finished episode 1410 | reward=1.20, length=194
+Finished episode 1420 | reward=0.09, length=187
+Finished episode 1430 | reward=0.86, length=132
+Finished episode 1440 | reward=2.29, length=142
+Finished episode 1450 | reward=0.11, length=81
+Finished episode 1460 | reward=1.89, length=200
+Finished episode 1470 | reward=1.96, length=235
+Finished episode 1480 | reward=1.29, length=205
+Finished episode 1490 | reward=2.24, length=219
+Finished episode 1500 | reward=2.20, length=215
+Evaluation: 26/50 wins (52.0%)
+  Avg Reward: 1.41
+  Unknown States: 0.0% (0/46)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 1500/8000
+  Avg Reward: 1.58, Avg Length: 183.2
+  Win Rate: 52.0%, Epsilon: 0.050
+  Q-table size: 44642
+  Overall Win Rate: 59.3%
+------------------------------------------------------------
+Finished episode 1510 | reward=1.28, length=205
+Finished episode 1520 | reward=2.22, length=158
+Finished episode 1530 | reward=0.50, length=132
+Finished episode 1540 | reward=1.36, length=162
+Finished episode 1550 | reward=1.80, length=152
+Finished episode 1560 | reward=1.81, length=194
+Finished episode 1570 | reward=1.99, length=171
+Finished episode 1580 | reward=1.83, length=271
+Finished episode 1590 | reward=2.02, length=178
+Finished episode 1600 | reward=1.38, length=148
+Episode 1600/8000 - Epsilon: 0.050, Q-table: 44975 states
+Finished episode 1610 | reward=2.26, length=210
+Finished episode 1620 | reward=1.90, length=182
+Finished episode 1630 | reward=2.26, length=265
+Finished episode 1640 | reward=0.57, length=75
+Finished episode 1650 | reward=2.22, length=257
+Finished episode 1660 | reward=2.10, length=185
+Finished episode 1670 | reward=1.07, length=132
+Finished episode 1680 | reward=1.44, length=192
+Finished episode 1690 | reward=2.05, length=163
+Finished episode 1700 | reward=1.53, length=142
+Episode 1700/8000 - Epsilon: 0.050, Q-table: 45275 states
+Finished episode 1710 | reward=0.23, length=55
+Finished episode 1720 | reward=2.19, length=173
+Finished episode 1730 | reward=1.42, length=219
+Finished episode 1740 | reward=1.92, length=243
+Finished episode 1750 | reward=1.99, length=166
+Finished episode 1760 | reward=0.93, length=113
+Finished episode 1770 | reward=2.43, length=291
+Finished episode 1780 | reward=1.79, length=246
+Finished episode 1790 | reward=1.63, length=190
+Finished episode 1800 | reward=2.42, length=137
+Episode 1800/8000 - Epsilon: 0.050, Q-table: 45568 states
+Finished episode 1810 | reward=1.01, length=146
+Finished episode 1820 | reward=2.17, length=206
+Finished episode 1830 | reward=0.24, length=161
+Finished episode 1840 | reward=1.93, length=204
+Finished episode 1850 | reward=1.89, length=161
+Finished episode 1860 | reward=-0.04, length=177
+Finished episode 1870 | reward=1.99, length=214
+Finished episode 1880 | reward=1.84, length=221
+Finished episode 1890 | reward=2.08, length=168
+Finished episode 1900 | reward=2.04, length=137
+Episode 1900/8000 - Epsilon: 0.050, Q-table: 45869 states
+Finished episode 1910 | reward=0.91, length=158
+Finished episode 1920 | reward=2.15, length=152
+Finished episode 1930 | reward=1.24, length=216
+Finished episode 1940 | reward=2.04, length=247
+Finished episode 1950 | reward=2.31, length=188
+Finished episode 1960 | reward=1.91, length=256
+Finished episode 1970 | reward=1.94, length=186
+Finished episode 1980 | reward=2.09, length=214
+Finished episode 1990 | reward=2.03, length=254
+Finished episode 2000 | reward=1.16, length=175
+Evaluation: 24/50 wins (48.0%)
+  Avg Reward: 1.46
+  Unknown States: 0.0% (0/51)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 2000/8000
+  Avg Reward: 1.59, Avg Length: 184.6
+  Win Rate: 48.0%, Epsilon: 0.050
+  Q-table size: 46268
+  Overall Win Rate: 59.5%
+------------------------------------------------------------
+Finished episode 2010 | reward=1.94, length=194
+Finished episode 2020 | reward=0.98, length=183
+Finished episode 2030 | reward=1.31, length=164
+Finished episode 2040 | reward=1.58, length=168
+Finished episode 2050 | reward=2.18, length=190
+Finished episode 2060 | reward=1.92, length=214
+Finished episode 2070 | reward=1.98, length=248
+Finished episode 2080 | reward=2.06, length=199
+Finished episode 2090 | reward=1.93, length=195
+Finished episode 2100 | reward=1.89, length=258
+Episode 2100/8000 - Epsilon: 0.050, Q-table: 46615 states
+Finished episode 2110 | reward=2.05, length=183
+Finished episode 2120 | reward=1.99, length=319
+Finished episode 2130 | reward=2.17, length=211
+Finished episode 2140 | reward=1.42, length=319
+Finished episode 2150 | reward=2.07, length=154
+Finished episode 2160 | reward=1.27, length=229
+Finished episode 2170 | reward=1.51, length=229
+Finished episode 2180 | reward=0.70, length=201
+Finished episode 2190 | reward=1.91, length=166
+Finished episode 2200 | reward=1.96, length=152
+Episode 2200/8000 - Epsilon: 0.050, Q-table: 46885 states
+Finished episode 2210 | reward=2.34, length=145
+Finished episode 2220 | reward=2.09, length=164
+Finished episode 2230 | reward=1.34, length=264
+Finished episode 2240 | reward=1.81, length=180
+Finished episode 2250 | reward=2.22, length=154
+Finished episode 2260 | reward=1.93, length=242
+Finished episode 2270 | reward=1.75, length=202
+Finished episode 2280 | reward=0.87, length=193
+Finished episode 2290 | reward=1.89, length=225
+Finished episode 2300 | reward=1.69, length=180
+Episode 2300/8000 - Epsilon: 0.050, Q-table: 47141 states
+Finished episode 2310 | reward=1.13, length=205
+Finished episode 2320 | reward=2.42, length=247
+Finished episode 2330 | reward=0.42, length=171
+Finished episode 2340 | reward=1.41, length=144
+Finished episode 2350 | reward=2.20, length=193
+Finished episode 2360 | reward=0.91, length=110
+Finished episode 2370 | reward=1.12, length=119
+Finished episode 2380 | reward=0.94, length=231
+Finished episode 2390 | reward=1.99, length=260
+Finished episode 2400 | reward=0.66, length=103
+Episode 2400/8000 - Epsilon: 0.050, Q-table: 47428 states
+Finished episode 2410 | reward=2.08, length=146
+Finished episode 2420 | reward=1.71, length=213
+Finished episode 2430 | reward=0.38, length=61
+Finished episode 2440 | reward=2.22, length=187
+Finished episode 2450 | reward=1.30, length=191
+Finished episode 2460 | reward=1.85, length=189
+Finished episode 2470 | reward=1.78, length=156
+Finished episode 2480 | reward=1.10, length=243
+Finished episode 2490 | reward=0.69, length=77
+Finished episode 2500 | reward=2.05, length=184
+Evaluation: 32/50 wins (64.0%)
+  Avg Reward: 1.65
+  Unknown States: 0.0% (0/45)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.05
+Episode 2500/8000
+  Avg Reward: 1.64, Avg Length: 188.1
+  Win Rate: 64.0%, Epsilon: 0.050
+  Q-table size: 47823
+  Overall Win Rate: 60.1%
+------------------------------------------------------------
+Finished episode 2510 | reward=2.23, length=159
+Finished episode 2520 | reward=1.98, length=198
+Finished episode 2530 | reward=2.30, length=127
+Finished episode 2540 | reward=0.26, length=83
+Finished episode 2550 | reward=1.13, length=202
+Finished episode 2560 | reward=1.31, length=210
+Finished episode 2570 | reward=1.68, length=180
+Finished episode 2580 | reward=0.75, length=134
+Finished episode 2590 | reward=2.38, length=154
+Finished episode 2600 | reward=1.11, length=223
+Episode 2600/8000 - Epsilon: 0.050, Q-table: 48072 states
+Finished episode 2610 | reward=1.45, length=219
+Finished episode 2620 | reward=2.31, length=140
+Finished episode 2630 | reward=1.18, length=201
+Finished episode 2640 | reward=1.46, length=154
+Finished episode 2650 | reward=0.93, length=166
+Finished episode 2660 | reward=0.30, length=106
+Finished episode 2670 | reward=2.05, length=161
+Finished episode 2680 | reward=2.14, length=192
+Finished episode 2690 | reward=1.12, length=151
+Finished episode 2700 | reward=1.62, length=174
+Episode 2700/8000 - Epsilon: 0.050, Q-table: 48331 states
+Finished episode 2710 | reward=1.77, length=217
+Finished episode 2720 | reward=1.62, length=262
+Finished episode 2730 | reward=1.21, length=241
+Finished episode 2740 | reward=2.16, length=174
+Finished episode 2750 | reward=2.09, length=198
+Finished episode 2760 | reward=0.79, length=144
+Finished episode 2770 | reward=1.22, length=236
+Finished episode 2780 | reward=1.48, length=175
+Finished episode 2790 | reward=2.34, length=138
+Finished episode 2800 | reward=1.94, length=266
+Episode 2800/8000 - Epsilon: 0.050, Q-table: 48611 states
+Finished episode 2810 | reward=2.09, length=202
+Finished episode 2820 | reward=1.40, length=217
+Finished episode 2830 | reward=2.04, length=164
+Finished episode 2840 | reward=1.51, length=146
+Finished episode 2850 | reward=1.67, length=176
+Finished episode 2860 | reward=1.93, length=161
+Finished episode 2870 | reward=1.77, length=183
+Finished episode 2880 | reward=2.09, length=159
+Finished episode 2890 | reward=0.63, length=109
+Finished episode 2900 | reward=1.89, length=198
+Episode 2900/8000 - Epsilon: 0.050, Q-table: 48865 states
+Finished episode 2910 | reward=1.16, length=141
+Finished episode 2920 | reward=1.98, length=200
+Finished episode 2930 | reward=2.20, length=268
+Finished episode 2940 | reward=1.05, length=189
+Finished episode 2950 | reward=1.80, length=270
+Finished episode 2960 | reward=1.88, length=154
+Finished episode 2970 | reward=1.38, length=157
+Finished episode 2980 | reward=2.29, length=165
+Finished episode 2990 | reward=1.61, length=276
+Finished episode 3000 | reward=1.92, length=141
+Evaluation: 28/50 wins (56.0%)
+  Avg Reward: 1.57
+  Unknown States: 0.0% (0/43)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.05
+Episode 3000/8000
+  Avg Reward: 1.67, Avg Length: 184.3
+  Win Rate: 56.0%, Epsilon: 0.050
+  Q-table size: 49243
+  Overall Win Rate: 60.3%
+------------------------------------------------------------
+Finished episode 3010 | reward=2.26, length=164
+Finished episode 3020 | reward=2.12, length=187
+Finished episode 3030 | reward=2.15, length=148
+Finished episode 3040 | reward=2.06, length=173
+Finished episode 3050 | reward=0.73, length=186
+Finished episode 3060 | reward=1.86, length=181
+Finished episode 3070 | reward=2.32, length=222
+Finished episode 3080 | reward=1.84, length=255
+Finished episode 3090 | reward=2.08, length=159
+Finished episode 3100 | reward=2.14, length=166
+Episode 3100/8000 - Epsilon: 0.050, Q-table: 49494 states
+Finished episode 3110 | reward=2.08, length=189
+Finished episode 3120 | reward=2.25, length=214
+Finished episode 3130 | reward=1.87, length=206
+Finished episode 3140 | reward=1.99, length=170
+Finished episode 3150 | reward=2.34, length=231
+Finished episode 3160 | reward=1.78, length=282
+Finished episode 3170 | reward=1.63, length=213
+Finished episode 3180 | reward=1.17, length=154
+Finished episode 3190 | reward=1.22, length=180
+Finished episode 3200 | reward=1.40, length=184
+Episode 3200/8000 - Epsilon: 0.050, Q-table: 49755 states
+Finished episode 3210 | reward=1.99, length=143
+Finished episode 3220 | reward=1.95, length=219
+Finished episode 3230 | reward=0.72, length=167
+Finished episode 3240 | reward=0.82, length=273
+Finished episode 3250 | reward=1.89, length=170
+Finished episode 3260 | reward=1.67, length=190
+Finished episode 3270 | reward=1.80, length=171
+Finished episode 3280 | reward=2.01, length=217
+Finished episode 3290 | reward=1.41, length=223
+Finished episode 3300 | reward=1.76, length=173
+Episode 3300/8000 - Epsilon: 0.050, Q-table: 50004 states
+Finished episode 3310 | reward=1.70, length=207
+Finished episode 3320 | reward=1.69, length=239
+Finished episode 3330 | reward=1.56, length=185
+Finished episode 3340 | reward=2.24, length=156
+Finished episode 3350 | reward=1.94, length=208
+Finished episode 3360 | reward=2.10, length=206
+Finished episode 3370 | reward=1.90, length=116
+Finished episode 3380 | reward=2.06, length=146
+Finished episode 3390 | reward=2.14, length=314
+Finished episode 3400 | reward=0.40, length=104
+Episode 3400/8000 - Epsilon: 0.050, Q-table: 50301 states
+Finished episode 3410 | reward=0.77, length=186
+Finished episode 3420 | reward=1.41, length=195
+Finished episode 3430 | reward=1.11, length=230
+Finished episode 3440 | reward=1.90, length=166
+Finished episode 3450 | reward=1.98, length=180
+Finished episode 3460 | reward=1.25, length=238
+Finished episode 3470 | reward=1.38, length=162
+Finished episode 3480 | reward=1.16, length=174
+Finished episode 3490 | reward=1.92, length=252
+Finished episode 3500 | reward=0.61, length=111
+Evaluation: 30/50 wins (60.0%)
+  Avg Reward: 1.52
+  Unknown States: 0.0% (0/48)
+  Avg Q(HIT): 0.06, Avg Q(STAY): 0.06
+Episode 3500/8000
+  Avg Reward: 1.61, Avg Length: 184.2
+  Win Rate: 60.0%, Epsilon: 0.050
+  Q-table size: 50655
+  Overall Win Rate: 60.4%
+------------------------------------------------------------
+Finished episode 3510 | reward=2.22, length=152
+Finished episode 3520 | reward=0.27, length=119
+Finished episode 3530 | reward=0.76, length=154
+Finished episode 3540 | reward=0.72, length=105
+Finished episode 3550 | reward=1.67, length=157
+Finished episode 3560 | reward=1.31, length=272
+Finished episode 3570 | reward=1.92, length=150
+Finished episode 3580 | reward=1.97, length=171
+Finished episode 3590 | reward=0.96, length=210
+Finished episode 3600 | reward=2.07, length=166
+Episode 3600/8000 - Epsilon: 0.050, Q-table: 50932 states
+Finished episode 3610 | reward=1.63, length=200
+Finished episode 3620 | reward=2.03, length=171
+Finished episode 3630 | reward=2.02, length=160
+Finished episode 3640 | reward=2.02, length=119
+Finished episode 3650 | reward=1.72, length=205
+Finished episode 3660 | reward=2.12, length=146
+Finished episode 3670 | reward=1.73, length=242
+Finished episode 3680 | reward=0.44, length=213
+Finished episode 3690 | reward=1.95, length=193
+Finished episode 3700 | reward=0.94, length=98
+Episode 3700/8000 - Epsilon: 0.050, Q-table: 51143 states
+Finished episode 3710 | reward=1.56, length=181
+Finished episode 3720 | reward=2.19, length=148
+Finished episode 3730 | reward=1.78, length=185
+Finished episode 3740 | reward=1.99, length=168
+Finished episode 3750 | reward=1.85, length=233
+Finished episode 3760 | reward=2.08, length=239
+Finished episode 3770 | reward=2.12, length=313
+Finished episode 3780 | reward=2.09, length=180
+Finished episode 3790 | reward=1.31, length=292
+Finished episode 3800 | reward=1.64, length=232
+Episode 3800/8000 - Epsilon: 0.050, Q-table: 51352 states
+Finished episode 3810 | reward=1.97, length=252
+Finished episode 3820 | reward=1.32, length=157
+Finished episode 3830 | reward=2.01, length=180
+Finished episode 3840 | reward=2.25, length=147
+Finished episode 3850 | reward=1.31, length=227
+Finished episode 3860 | reward=2.13, length=162
+Finished episode 3870 | reward=1.73, length=212
+Finished episode 3880 | reward=0.80, length=186
+Finished episode 3890 | reward=1.32, length=248
+Finished episode 3900 | reward=1.82, length=161
+Episode 3900/8000 - Epsilon: 0.050, Q-table: 51567 states
+Finished episode 3910 | reward=2.00, length=176
+Finished episode 3920 | reward=1.51, length=147
+Finished episode 3930 | reward=1.97, length=198
+Finished episode 3940 | reward=2.04, length=296
+Finished episode 3950 | reward=2.26, length=128
+Finished episode 3960 | reward=1.00, length=209
+Finished episode 3970 | reward=2.31, length=165
+Finished episode 3980 | reward=0.42, length=78
+Finished episode 3990 | reward=2.00, length=150
+Finished episode 4000 | reward=1.49, length=160
+Evaluation: 32/50 wins (64.0%)
+  Avg Reward: 1.71
+  Unknown States: 0.0% (0/47)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.05
+Episode 4000/8000
+  Avg Reward: 1.66, Avg Length: 182.6
+  Win Rate: 64.0%, Epsilon: 0.050
+  Q-table size: 51891
+  Overall Win Rate: 60.7%
+------------------------------------------------------------
+Finished episode 4010 | reward=1.93, length=200
+Finished episode 4020 | reward=2.15, length=186
+Finished episode 4030 | reward=1.06, length=164
+Finished episode 4040 | reward=2.11, length=265
+Finished episode 4050 | reward=2.25, length=146
+Finished episode 4060 | reward=1.40, length=227
+Finished episode 4070 | reward=2.19, length=171
+Finished episode 4080 | reward=1.84, length=165
+Finished episode 4090 | reward=0.96, length=224
+Finished episode 4100 | reward=1.29, length=168
+Episode 4100/8000 - Epsilon: 0.050, Q-table: 52121 states
+Finished episode 4110 | reward=0.13, length=51
+Finished episode 4120 | reward=1.67, length=132
+Finished episode 4130 | reward=0.85, length=250
+Finished episode 4140 | reward=1.76, length=126
+Finished episode 4150 | reward=2.01, length=149
+Finished episode 4160 | reward=2.05, length=142
+Finished episode 4170 | reward=1.89, length=174
+Finished episode 4180 | reward=1.90, length=168
+Finished episode 4190 | reward=1.83, length=219
+Finished episode 4200 | reward=1.14, length=274
+Episode 4200/8000 - Epsilon: 0.050, Q-table: 52338 states
+Finished episode 4210 | reward=1.72, length=226
+Finished episode 4220 | reward=1.98, length=243
+Finished episode 4230 | reward=0.93, length=230
+Finished episode 4240 | reward=2.16, length=139
+Finished episode 4250 | reward=0.11, length=97
+Finished episode 4260 | reward=1.99, length=175
+Finished episode 4270 | reward=1.73, length=181
+Finished episode 4280 | reward=1.05, length=203
+Finished episode 4290 | reward=1.95, length=198
+Finished episode 4300 | reward=2.26, length=183
+Episode 4300/8000 - Epsilon: 0.050, Q-table: 52584 states
+Finished episode 4310 | reward=1.58, length=189
+Finished episode 4320 | reward=2.06, length=160
+Finished episode 4330 | reward=1.28, length=233
+Finished episode 4340 | reward=0.15, length=93
+Finished episode 4350 | reward=2.12, length=194
+Finished episode 4360 | reward=1.23, length=151
+Finished episode 4370 | reward=2.13, length=165
+Finished episode 4380 | reward=2.08, length=192
+Finished episode 4390 | reward=1.83, length=147
+Finished episode 4400 | reward=1.24, length=218
+Episode 4400/8000 - Epsilon: 0.050, Q-table: 52819 states
+Finished episode 4410 | reward=2.19, length=165
+Finished episode 4420 | reward=2.07, length=258
+Finished episode 4430 | reward=1.75, length=297
+Finished episode 4440 | reward=2.16, length=170
+Finished episode 4450 | reward=1.25, length=114
+Finished episode 4460 | reward=0.09, length=110
+Finished episode 4470 | reward=2.15, length=203
+Finished episode 4480 | reward=0.34, length=103
+Finished episode 4490 | reward=2.03, length=190
+Finished episode 4500 | reward=1.30, length=227
+Evaluation: 26/50 wins (52.0%)
+  Avg Reward: 1.54
+  Unknown States: 0.0% (0/40)
+  Avg Q(HIT): 0.06, Avg Q(STAY): 0.07
+Episode 4500/8000
+  Avg Reward: 1.66, Avg Length: 182.4
+  Win Rate: 52.0%, Epsilon: 0.050
+  Q-table size: 53163
+  Overall Win Rate: 60.9%
+------------------------------------------------------------
+Finished episode 4510 | reward=2.21, length=242
+Finished episode 4520 | reward=0.84, length=201
+Finished episode 4530 | reward=2.13, length=183
+Finished episode 4540 | reward=0.59, length=121
+Finished episode 4550 | reward=1.69, length=240
+Finished episode 4560 | reward=1.83, length=155
+Finished episode 4570 | reward=1.22, length=176
+Finished episode 4580 | reward=1.19, length=140
+Finished episode 4590 | reward=2.08, length=142
+Finished episode 4600 | reward=1.44, length=191
+Episode 4600/8000 - Epsilon: 0.050, Q-table: 53391 states
+Finished episode 4610 | reward=0.67, length=203
+Finished episode 4620 | reward=0.30, length=144
+Finished episode 4630 | reward=2.08, length=155
+Finished episode 4640 | reward=1.43, length=166
+Finished episode 4650 | reward=1.90, length=196
+Finished episode 4660 | reward=2.34, length=173
+Finished episode 4670 | reward=1.09, length=186
+Finished episode 4680 | reward=2.03, length=165
+Finished episode 4690 | reward=1.12, length=200
+Finished episode 4700 | reward=1.92, length=192
+Episode 4700/8000 - Epsilon: 0.050, Q-table: 53617 states
+Finished episode 4710 | reward=1.88, length=181
+Finished episode 4720 | reward=2.14, length=217
+Finished episode 4730 | reward=1.90, length=162
+Finished episode 4740 | reward=2.20, length=186
+Finished episode 4750 | reward=2.25, length=142
+Finished episode 4760 | reward=0.96, length=170
+Finished episode 4770 | reward=0.43, length=106
+Finished episode 4780 | reward=1.41, length=222
+Finished episode 4790 | reward=1.49, length=220
+Finished episode 4800 | reward=1.89, length=190
+Episode 4800/8000 - Epsilon: 0.050, Q-table: 53872 states
+Finished episode 4810 | reward=1.21, length=200
+Finished episode 4820 | reward=1.90, length=196
+Finished episode 4830 | reward=1.20, length=216
+Finished episode 4840 | reward=1.94, length=207
+Finished episode 4850 | reward=0.47, length=113
+Finished episode 4860 | reward=1.87, length=167
+Finished episode 4870 | reward=1.73, length=162
+Finished episode 4880 | reward=1.87, length=206
+Finished episode 4890 | reward=1.32, length=195
+Finished episode 4900 | reward=0.74, length=93
+Episode 4900/8000 - Epsilon: 0.050, Q-table: 54068 states
+Finished episode 4910 | reward=1.07, length=181
+Finished episode 4920 | reward=2.01, length=162
+Finished episode 4930 | reward=2.09, length=181
+Finished episode 4940 | reward=2.02, length=156
+Finished episode 4950 | reward=1.81, length=258
+Finished episode 4960 | reward=0.03, length=59
+Finished episode 4970 | reward=1.57, length=165
+Finished episode 4980 | reward=1.99, length=152
+Finished episode 4990 | reward=1.99, length=230
+Finished episode 5000 | reward=1.51, length=193
+Evaluation: 30/50 wins (60.0%)
+  Avg Reward: 1.60
+  Unknown States: 0.0% (0/43)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.06
+Episode 5000/8000
+  Avg Reward: 1.56, Avg Length: 181.4
+  Win Rate: 60.0%, Epsilon: 0.050
+  Q-table size: 54384
+  Overall Win Rate: 60.4%
+------------------------------------------------------------
+Finished episode 5010 | reward=0.85, length=92
+Finished episode 5020 | reward=2.08, length=186
+Finished episode 5030 | reward=1.98, length=172
+Finished episode 5040 | reward=0.93, length=159
+Finished episode 5050 | reward=1.84, length=211
+Finished episode 5060 | reward=1.38, length=211
+Finished episode 5070 | reward=0.90, length=232
+Finished episode 5080 | reward=2.01, length=240
+Finished episode 5090 | reward=2.35, length=235
+Finished episode 5100 | reward=1.82, length=201
+Episode 5100/8000 - Epsilon: 0.050, Q-table: 54571 states
+Finished episode 5110 | reward=1.57, length=270
+Finished episode 5120 | reward=1.92, length=199
+Finished episode 5130 | reward=1.71, length=241
+Finished episode 5140 | reward=2.09, length=175
+Finished episode 5150 | reward=1.98, length=156
+Finished episode 5160 | reward=2.31, length=184
+Finished episode 5170 | reward=1.03, length=197
+Finished episode 5180 | reward=1.76, length=222
+Finished episode 5190 | reward=1.50, length=205
+Finished episode 5200 | reward=1.91, length=152
+Episode 5200/8000 - Epsilon: 0.050, Q-table: 54815 states
+Finished episode 5210 | reward=2.04, length=193
+Finished episode 5220 | reward=2.18, length=207
+Finished episode 5230 | reward=2.12, length=185
+Finished episode 5240 | reward=1.48, length=130
+Finished episode 5250 | reward=1.79, length=243
+Finished episode 5260 | reward=0.31, length=128
+Finished episode 5270 | reward=1.58, length=194
+Finished episode 5280 | reward=2.09, length=167
+Finished episode 5290 | reward=2.02, length=189
+Finished episode 5300 | reward=1.06, length=210
+Episode 5300/8000 - Epsilon: 0.050, Q-table: 55013 states
+Finished episode 5310 | reward=2.04, length=197
+Finished episode 5320 | reward=2.26, length=173
+Finished episode 5330 | reward=2.09, length=185
+Finished episode 5340 | reward=2.15, length=155
+Finished episode 5350 | reward=1.11, length=180
+Finished episode 5360 | reward=1.82, length=222
+Finished episode 5370 | reward=1.78, length=165
+Finished episode 5380 | reward=1.83, length=231
+Finished episode 5390 | reward=1.12, length=191
+Finished episode 5400 | reward=0.29, length=213
+Episode 5400/8000 - Epsilon: 0.050, Q-table: 55204 states
+Finished episode 5410 | reward=1.92, length=209
+Finished episode 5420 | reward=2.02, length=211
+Finished episode 5430 | reward=2.16, length=181
+Finished episode 5440 | reward=0.91, length=185
+Finished episode 5450 | reward=1.96, length=242
+Finished episode 5460 | reward=0.56, length=105
+Finished episode 5470 | reward=0.78, length=251
+Finished episode 5480 | reward=2.41, length=151
+Finished episode 5490 | reward=1.34, length=160
+Finished episode 5500 | reward=0.89, length=188
+Evaluation: 33/50 wins (66.0%)
+  Avg Reward: 1.75
+  Unknown States: 0.0% (0/48)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.05
+Episode 5500/8000
+  Avg Reward: 1.64, Avg Length: 181.8
+  Win Rate: 66.0%, Epsilon: 0.050
+  Q-table size: 55510
+  Overall Win Rate: 60.5%
+------------------------------------------------------------
+Finished episode 5510 | reward=2.09, length=152
+Finished episode 5520 | reward=1.93, length=160
+Finished episode 5530 | reward=1.25, length=170
+Finished episode 5540 | reward=2.02, length=158
+Finished episode 5550 | reward=2.08, length=194
+Finished episode 5560 | reward=1.91, length=196
+Finished episode 5570 | reward=2.19, length=136
+Finished episode 5580 | reward=1.42, length=233
+Finished episode 5590 | reward=2.16, length=167
+Finished episode 5600 | reward=2.01, length=207
+Episode 5600/8000 - Epsilon: 0.050, Q-table: 55695 states
+Finished episode 5610 | reward=1.75, length=201
+Finished episode 5620 | reward=1.97, length=246
+Finished episode 5630 | reward=1.33, length=206
+Finished episode 5640 | reward=1.32, length=165
+Finished episode 5650 | reward=1.80, length=207
+Finished episode 5660 | reward=0.92, length=234
+Finished episode 5670 | reward=0.28, length=76
+Finished episode 5680 | reward=1.67, length=158
+Finished episode 5690 | reward=1.05, length=142
+Finished episode 5700 | reward=2.08, length=229
+Episode 5700/8000 - Epsilon: 0.050, Q-table: 55928 states
+Finished episode 5710 | reward=1.92, length=177
+Finished episode 5720 | reward=1.84, length=187
+Finished episode 5730 | reward=1.38, length=158
+Finished episode 5740 | reward=2.32, length=230
+Finished episode 5750 | reward=2.08, length=209
+Finished episode 5760 | reward=2.13, length=151
+Finished episode 5770 | reward=0.47, length=71
+Finished episode 5780 | reward=1.29, length=173
+Finished episode 5790 | reward=2.16, length=176
+Finished episode 5800 | reward=2.27, length=120
+Episode 5800/8000 - Epsilon: 0.050, Q-table: 56158 states
+Finished episode 5810 | reward=2.13, length=225
+Finished episode 5820 | reward=1.49, length=229
+Finished episode 5830 | reward=1.99, length=185
+Finished episode 5840 | reward=1.57, length=190
+Finished episode 5850 | reward=0.71, length=319
+Finished episode 5860 | reward=1.90, length=114
+Finished episode 5870 | reward=2.04, length=211
+Finished episode 5880 | reward=2.10, length=172
+Finished episode 5890 | reward=1.89, length=185
+Finished episode 5900 | reward=0.88, length=123
+Episode 5900/8000 - Epsilon: 0.050, Q-table: 56376 states
+Finished episode 5910 | reward=2.08, length=197
+Finished episode 5920 | reward=2.15, length=190
+Finished episode 5930 | reward=1.85, length=173
+Finished episode 5940 | reward=2.04, length=212
+Finished episode 5950 | reward=1.33, length=257
+Finished episode 5960 | reward=1.96, length=166
+Finished episode 5970 | reward=0.23, length=128
+Finished episode 5980 | reward=2.23, length=157
+Finished episode 5990 | reward=1.04, length=203
+Finished episode 6000 | reward=2.55, length=176
+Evaluation: 25/50 wins (50.0%)
+  Avg Reward: 1.50
+  Unknown States: 0.0% (0/44)
+  Avg Q(HIT): 0.05, Avg Q(STAY): 0.05
+Episode 6000/8000
+  Avg Reward: 1.63, Avg Length: 180.1
+  Win Rate: 50.0%, Epsilon: 0.050
+  Q-table size: 56594
+  Overall Win Rate: 60.6%
+------------------------------------------------------------
+Finished episode 6010 | reward=0.93, length=162
+Finished episode 6020 | reward=1.84, length=149
+Finished episode 6030 | reward=0.64, length=125
+Finished episode 6040 | reward=2.16, length=133
+Finished episode 6050 | reward=0.99, length=207
+Finished episode 6060 | reward=2.13, length=168
+Finished episode 6070 | reward=2.20, length=143
+Finished episode 6080 | reward=2.01, length=158
+Finished episode 6090 | reward=2.00, length=201
+Finished episode 6100 | reward=1.21, length=196
+Episode 6100/8000 - Epsilon: 0.050, Q-table: 56783 states
+Finished episode 6110 | reward=1.99, length=179
+Finished episode 6120 | reward=0.31, length=89
+Finished episode 6130 | reward=2.06, length=164
+Finished episode 6140 | reward=1.77, length=237
+Finished episode 6150 | reward=2.00, length=212
+Finished episode 6160 | reward=2.25, length=141
+Finished episode 6170 | reward=0.80, length=211
+Finished episode 6180 | reward=1.99, length=156
+Finished episode 6190 | reward=2.02, length=135
+Finished episode 6200 | reward=1.22, length=140
+Episode 6200/8000 - Epsilon: 0.050, Q-table: 56969 states
+Finished episode 6210 | reward=1.36, length=165
+Finished episode 6220 | reward=1.00, length=182
+Finished episode 6230 | reward=1.83, length=182
+Finished episode 6240 | reward=2.10, length=172
+Finished episode 6250 | reward=1.90, length=185
+Finished episode 6260 | reward=1.90, length=258
+Finished episode 6270 | reward=0.90, length=157
+Finished episode 6280 | reward=1.21, length=182
+Finished episode 6290 | reward=1.98, length=167
+Finished episode 6300 | reward=1.48, length=152
+Episode 6300/8000 - Epsilon: 0.050, Q-table: 57156 states
+Finished episode 6310 | reward=0.66, length=83
+Finished episode 6320 | reward=2.02, length=132
+Finished episode 6330 | reward=1.70, length=171
+Finished episode 6340 | reward=0.57, length=124
+Finished episode 6350 | reward=1.50, length=178
+Finished episode 6360 | reward=2.06, length=173
+Finished episode 6370 | reward=2.02, length=247
+Finished episode 6380 | reward=1.30, length=149
+Finished episode 6390 | reward=2.06, length=225
+Finished episode 6400 | reward=2.15, length=156
+Episode 6400/8000 - Epsilon: 0.050, Q-table: 57333 states
+Finished episode 6410 | reward=0.49, length=168
+Finished episode 6420 | reward=1.33, length=126
+Finished episode 6430 | reward=1.54, length=201
+Finished episode 6440 | reward=1.89, length=221
+Finished episode 6450 | reward=2.20, length=154
+Finished episode 6460 | reward=0.36, length=81
+Finished episode 6470 | reward=2.26, length=191
+Finished episode 6480 | reward=1.14, length=161
+Finished episode 6490 | reward=1.03, length=226
+Finished episode 6500 | reward=2.32, length=159
+Evaluation: 30/50 wins (60.0%)
+  Avg Reward: 1.57
+  Unknown States: 0.0% (0/45)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.04
+Episode 6500/8000
+  Avg Reward: 1.55, Avg Length: 179.6
+  Win Rate: 60.0%, Epsilon: 0.050
+  Q-table size: 57615
+  Overall Win Rate: 60.2%
+------------------------------------------------------------
+Finished episode 6510 | reward=1.48, length=204
+Finished episode 6520 | reward=1.89, length=161
+Finished episode 6530 | reward=1.74, length=143
+Finished episode 6540 | reward=2.22, length=140
+Finished episode 6550 | reward=1.92, length=178
+Finished episode 6560 | reward=2.24, length=220
+Finished episode 6570 | reward=2.02, length=160
+Finished episode 6580 | reward=1.99, length=169
+Finished episode 6590 | reward=2.21, length=212
+Finished episode 6600 | reward=1.56, length=253
+Episode 6600/8000 - Epsilon: 0.050, Q-table: 57785 states
+Finished episode 6610 | reward=1.74, length=186
+Finished episode 6620 | reward=1.77, length=173
+Finished episode 6630 | reward=1.59, length=186
+Finished episode 6640 | reward=1.00, length=144
+Finished episode 6650 | reward=1.62, length=239
+Finished episode 6660 | reward=1.19, length=166
+Finished episode 6670 | reward=1.81, length=238
+Finished episode 6680 | reward=1.61, length=160
+Finished episode 6690 | reward=0.57, length=77
+Finished episode 6700 | reward=1.85, length=161
+Episode 6700/8000 - Epsilon: 0.050, Q-table: 57984 states
+Finished episode 6710 | reward=1.87, length=223
+Finished episode 6720 | reward=1.14, length=277
+Finished episode 6730 | reward=1.70, length=305
+Finished episode 6740 | reward=2.21, length=224
+Finished episode 6750 | reward=0.66, length=105
+Finished episode 6760 | reward=2.00, length=237
+Finished episode 6770 | reward=0.76, length=240
+Finished episode 6780 | reward=1.85, length=163
+Finished episode 6790 | reward=0.98, length=90
+Finished episode 6800 | reward=1.70, length=247
+Episode 6800/8000 - Epsilon: 0.050, Q-table: 58194 states
+Finished episode 6810 | reward=2.15, length=160
+Finished episode 6820 | reward=1.79, length=220
+Finished episode 6830 | reward=1.44, length=214
+Finished episode 6840 | reward=1.61, length=243
+Finished episode 6850 | reward=2.07, length=291
+Finished episode 6860 | reward=-0.45, length=68
+Finished episode 6870 | reward=2.04, length=154
+Finished episode 6880 | reward=1.30, length=229
+Finished episode 6890 | reward=1.95, length=203
+Finished episode 6900 | reward=2.18, length=182
+Episode 6900/8000 - Epsilon: 0.050, Q-table: 58377 states
+Finished episode 6910 | reward=2.25, length=171
+Finished episode 6920 | reward=2.00, length=148
+Finished episode 6930 | reward=1.32, length=204
+Finished episode 6940 | reward=1.92, length=162
+Finished episode 6950 | reward=2.15, length=183
+Finished episode 6960 | reward=1.89, length=162
+Finished episode 6970 | reward=1.91, length=156
+Finished episode 6980 | reward=1.96, length=161
+Finished episode 6990 | reward=1.86, length=229
+Finished episode 7000 | reward=1.88, length=167
+Evaluation: 32/50 wins (64.0%)
+  Avg Reward: 1.65
+  Unknown States: 0.0% (0/10)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.05
+Episode 7000/8000
+  Avg Reward: 1.64, Avg Length: 183.7
+  Win Rate: 64.0%, Epsilon: 0.050
+  Q-table size: 58637
+  Overall Win Rate: 60.3%
+------------------------------------------------------------
+Finished episode 7010 | reward=1.37, length=190
+Finished episode 7020 | reward=1.03, length=143
+Finished episode 7030 | reward=2.00, length=171
+Finished episode 7040 | reward=2.12, length=157
+Finished episode 7050 | reward=2.04, length=163
+Finished episode 7060 | reward=1.85, length=171
+Finished episode 7070 | reward=0.47, length=88
+Finished episode 7080 | reward=1.54, length=223
+Finished episode 7090 | reward=2.09, length=170
+Finished episode 7100 | reward=2.49, length=150
+Episode 7100/8000 - Epsilon: 0.050, Q-table: 58810 states
+Finished episode 7110 | reward=1.85, length=172
+Finished episode 7120 | reward=1.39, length=183
+Finished episode 7130 | reward=2.12, length=177
+Finished episode 7140 | reward=2.05, length=201
+Finished episode 7150 | reward=1.92, length=162
+Finished episode 7160 | reward=0.44, length=84
+Finished episode 7170 | reward=1.10, length=210
+Finished episode 7180 | reward=1.18, length=255
+Finished episode 7190 | reward=2.02, length=167
+Finished episode 7200 | reward=2.20, length=192
+Episode 7200/8000 - Epsilon: 0.050, Q-table: 59020 states
+Finished episode 7210 | reward=1.88, length=120
+Finished episode 7220 | reward=1.27, length=279
+Finished episode 7230 | reward=2.24, length=235
+Finished episode 7240 | reward=1.91, length=163
+Finished episode 7250 | reward=2.10, length=182
+Finished episode 7260 | reward=1.66, length=245
+Finished episode 7270 | reward=1.91, length=241
+Finished episode 7280 | reward=1.51, length=166
+Finished episode 7290 | reward=2.09, length=174
+Finished episode 7300 | reward=1.40, length=199
+Episode 7300/8000 - Epsilon: 0.050, Q-table: 59194 states
+Finished episode 7310 | reward=2.31, length=160
+Finished episode 7320 | reward=0.86, length=168
+Finished episode 7330 | reward=2.04, length=147
+Finished episode 7340 | reward=2.19, length=195
+Finished episode 7350 | reward=2.20, length=122
+Finished episode 7360 | reward=1.92, length=207
+Finished episode 7370 | reward=1.79, length=174
+Finished episode 7380 | reward=1.42, length=192
+Finished episode 7390 | reward=1.88, length=358
+Finished episode 7400 | reward=1.82, length=145
+Episode 7400/8000 - Epsilon: 0.050, Q-table: 59401 states
+Finished episode 7410 | reward=1.22, length=184
+Finished episode 7420 | reward=1.07, length=292
+Finished episode 7430 | reward=2.08, length=144
+Finished episode 7440 | reward=2.02, length=157
+Finished episode 7450 | reward=1.03, length=193
+Finished episode 7460 | reward=1.59, length=182
+Finished episode 7470 | reward=1.62, length=145
+Finished episode 7480 | reward=2.08, length=194
+Finished episode 7490 | reward=1.42, length=148
+Finished episode 7500 | reward=0.18, length=119
+Evaluation: 35/50 wins (70.0%)
+  Avg Reward: 1.72
+  Unknown States: 0.0% (0/49)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.05
+Episode 7500/8000
+  Avg Reward: 1.67, Avg Length: 180.0
+  Win Rate: 70.0%, Epsilon: 0.050
+  Q-table size: 59672
+  Overall Win Rate: 60.6%
+------------------------------------------------------------
+Finished episode 7510 | reward=0.71, length=221
+Finished episode 7520 | reward=1.68, length=211
+Finished episode 7530 | reward=2.21, length=156
+Finished episode 7540 | reward=0.71, length=164
+Finished episode 7550 | reward=2.30, length=151
+Finished episode 7560 | reward=1.43, length=181
+Finished episode 7570 | reward=1.49, length=195
+Finished episode 7580 | reward=1.79, length=166
+Finished episode 7590 | reward=2.07, length=202
+Finished episode 7600 | reward=0.46, length=93
+Episode 7600/8000 - Epsilon: 0.050, Q-table: 59894 states
+Finished episode 7610 | reward=2.15, length=190
+Finished episode 7620 | reward=1.81, length=194
+Finished episode 7630 | reward=1.99, length=218
+Finished episode 7640 | reward=1.93, length=207
+Finished episode 7650 | reward=2.12, length=158
+Finished episode 7660 | reward=1.41, length=142
+Finished episode 7670 | reward=2.19, length=152
+Finished episode 7680 | reward=2.54, length=152
+Finished episode 7690 | reward=2.26, length=161
+Finished episode 7700 | reward=1.37, length=148
+Episode 7700/8000 - Epsilon: 0.050, Q-table: 60064 states
+Finished episode 7710 | reward=1.52, length=203
+Finished episode 7720 | reward=1.80, length=189
+Finished episode 7730 | reward=2.02, length=135
+Finished episode 7740 | reward=2.19, length=165
+Finished episode 7750 | reward=1.06, length=184
+Finished episode 7760 | reward=2.04, length=185
+Finished episode 7770 | reward=1.55, length=191
+Finished episode 7780 | reward=0.90, length=167
+Finished episode 7790 | reward=2.02, length=145
+Finished episode 7800 | reward=1.23, length=186
+Episode 7800/8000 - Epsilon: 0.050, Q-table: 60271 states
+Finished episode 7810 | reward=2.16, length=160
+Finished episode 7820 | reward=2.07, length=230
+Finished episode 7830 | reward=2.02, length=198
+Finished episode 7840 | reward=1.04, length=210
+Finished episode 7850 | reward=1.28, length=180
+Finished episode 7860 | reward=2.07, length=197
+Finished episode 7870 | reward=2.17, length=128
+Finished episode 7880 | reward=1.68, length=169
+Finished episode 7890 | reward=0.61, length=148
+Finished episode 7900 | reward=1.81, length=133
+Episode 7900/8000 - Epsilon: 0.050, Q-table: 60477 states
+Finished episode 7910 | reward=1.89, length=142
+Finished episode 7920 | reward=1.10, length=166
+Finished episode 7930 | reward=2.29, length=142
+Finished episode 7940 | reward=0.95, length=166
+Finished episode 7950 | reward=2.21, length=115
+Finished episode 7960 | reward=2.17, length=153
+Finished episode 7970 | reward=2.06, length=176
+Finished episode 7980 | reward=2.01, length=138
+Finished episode 7990 | reward=2.02, length=186
+Finished episode 8000 | reward=0.29, length=88
+Evaluation: 34/50 wins (68.0%)
+  Avg Reward: 1.74
+  Unknown States: 0.0% (0/35)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.05
+Episode 8000/8000
+  Avg Reward: 1.67, Avg Length: 179.9
+  Win Rate: 68.0%, Epsilon: 0.050
+  Q-table size: 60730
+  Overall Win Rate: 60.8%
+------------------------------------------------------------
+
+Training completed in 39.5 seconds
+Final epsilon: 0.050
+Final Q-table size: 60730 states
+Overall win rate: 60.8%
+
+======================================================================
+STAGE 3: Training against Heuristic opponents
+======================================================================
+Adjusted learning rate to 0.125 for Stage 3
+Starting training for 6000 episodes...
+Initial epsilon: 0.050
+Learning rate: 0.125, Discount: 0.9
+------------------------------------------------------------
+Finished episode 10 | reward=-0.02, length=142
+Finished episode 20 | reward=0.28, length=225
+Finished episode 30 | reward=0.32, length=267
+Finished episode 40 | reward=1.02, length=219
+Finished episode 50 | reward=0.05, length=280
+Finished episode 60 | reward=0.36, length=188
+Finished episode 70 | reward=1.27, length=166
+Finished episode 80 | reward=0.46, length=282
+Finished episode 90 | reward=0.30, length=282
+Finished episode 100 | reward=0.37, length=234
+Episode 100/6000 - Epsilon: 0.050, Q-table: 60918 states
+Finished episode 110 | reward=0.86, length=191
+Finished episode 120 | reward=0.15, length=197
+Finished episode 130 | reward=1.03, length=203
+Finished episode 140 | reward=1.12, length=238
+Finished episode 150 | reward=1.53, length=178
+Finished episode 160 | reward=0.67, length=227
+Finished episode 170 | reward=0.14, length=107
+Finished episode 180 | reward=0.48, length=258
+Finished episode 190 | reward=-0.04, length=150
+Finished episode 200 | reward=0.26, length=231
+Episode 200/6000 - Epsilon: 0.050, Q-table: 61136 states
+Finished episode 210 | reward=0.26, length=244
+Finished episode 220 | reward=0.24, length=278
+Finished episode 230 | reward=0.61, length=232
+Finished episode 240 | reward=0.15, length=182
+Finished episode 250 | reward=0.32, length=192
+Finished episode 260 | reward=0.62, length=244
+Finished episode 270 | reward=-0.09, length=209
+Finished episode 280 | reward=0.68, length=205
+Finished episode 290 | reward=0.35, length=246
+Finished episode 300 | reward=1.50, length=177
+Episode 300/6000 - Epsilon: 0.050, Q-table: 61355 states
+Finished episode 310 | reward=1.21, length=187
+Finished episode 320 | reward=0.52, length=154
+Finished episode 330 | reward=0.15, length=214
+Finished episode 340 | reward=0.33, length=247
+Finished episode 350 | reward=0.94, length=198
+Finished episode 360 | reward=1.19, length=210
+Finished episode 370 | reward=0.33, length=122
+Finished episode 380 | reward=0.42, length=158
+Finished episode 390 | reward=-0.01, length=103
+Finished episode 400 | reward=0.28, length=111
+Episode 400/6000 - Epsilon: 0.050, Q-table: 61579 states
+Finished episode 410 | reward=1.25, length=206
+Finished episode 420 | reward=1.33, length=253
+Finished episode 430 | reward=0.44, length=259
+Finished episode 440 | reward=0.28, length=229
+Finished episode 450 | reward=0.56, length=287
+Finished episode 460 | reward=1.13, length=206
+Finished episode 470 | reward=0.41, length=162
+Finished episode 480 | reward=0.49, length=225
+Finished episode 490 | reward=0.27, length=170
+Finished episode 500 | reward=0.88, length=301
+Evaluation: 9/50 wins (18.0%)
+  Avg Reward: 0.44
+  Unknown States: 0.0% (0/23)
+  Avg Q(HIT): 0.05, Avg Q(STAY): 0.05
+Episode 500/6000
+  Avg Reward: 0.49, Avg Length: 205.0
+  Win Rate: 18.0%, Epsilon: 0.050
+  Q-table size: 61923
+  Overall Win Rate: 20.4%
+------------------------------------------------------------
+Finished episode 510 | reward=0.37, length=163
+Finished episode 520 | reward=0.43, length=226
+Finished episode 530 | reward=-0.11, length=125
+Finished episode 540 | reward=0.18, length=125
+Finished episode 550 | reward=0.13, length=163
+Finished episode 560 | reward=1.24, length=212
+Finished episode 570 | reward=0.64, length=224
+Finished episode 580 | reward=1.51, length=175
+Finished episode 590 | reward=0.73, length=205
+Finished episode 600 | reward=0.41, length=207
+Episode 600/6000 - Epsilon: 0.050, Q-table: 62122 states
+Finished episode 610 | reward=0.21, length=180
+Finished episode 620 | reward=1.09, length=189
+Finished episode 630 | reward=0.29, length=257
+Finished episode 640 | reward=0.84, length=176
+Finished episode 650 | reward=0.63, length=208
+Finished episode 660 | reward=1.08, length=239
+Finished episode 670 | reward=0.27, length=254
+Finished episode 680 | reward=0.70, length=211
+Finished episode 690 | reward=-0.06, length=156
+Finished episode 700 | reward=0.26, length=140
+Episode 700/6000 - Epsilon: 0.050, Q-table: 62353 states
+Finished episode 710 | reward=0.43, length=317
+Finished episode 720 | reward=0.44, length=189
+Finished episode 730 | reward=0.38, length=250
+Finished episode 740 | reward=0.65, length=197
+Finished episode 750 | reward=0.11, length=122
+Finished episode 760 | reward=0.54, length=213
+Finished episode 770 | reward=0.70, length=204
+Finished episode 780 | reward=0.76, length=207
+Finished episode 790 | reward=0.94, length=352
+Finished episode 800 | reward=0.40, length=185
+Episode 800/6000 - Epsilon: 0.050, Q-table: 62567 states
+Finished episode 810 | reward=0.54, length=255
+Finished episode 820 | reward=0.88, length=218
+Finished episode 830 | reward=0.11, length=191
+Finished episode 840 | reward=0.25, length=234
+Finished episode 850 | reward=0.27, length=325
+Finished episode 860 | reward=0.55, length=293
+Finished episode 870 | reward=0.01, length=265
+Finished episode 880 | reward=1.45, length=179
+Finished episode 890 | reward=0.43, length=201
+Finished episode 900 | reward=0.39, length=272
+Episode 900/6000 - Epsilon: 0.050, Q-table: 62782 states
+Finished episode 910 | reward=0.86, length=243
+Finished episode 920 | reward=0.39, length=280
+Finished episode 930 | reward=1.16, length=217
+Finished episode 940 | reward=-0.03, length=92
+Finished episode 950 | reward=0.27, length=248
+Finished episode 960 | reward=0.24, length=248
+Finished episode 970 | reward=0.40, length=300
+Finished episode 980 | reward=0.12, length=238
+Finished episode 990 | reward=1.17, length=175
+Finished episode 1000 | reward=0.24, length=295
+Evaluation: 15/50 wins (30.0%)
+  Avg Reward: 0.64
+  Unknown States: 0.0% (0/40)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 1000/6000
+  Avg Reward: 0.50, Avg Length: 205.9
+  Win Rate: 30.0%, Epsilon: 0.050
+  Q-table size: 63099
+  Overall Win Rate: 20.0%
+------------------------------------------------------------
+Finished episode 1010 | reward=0.26, length=190
+Finished episode 1020 | reward=0.23, length=251
+Finished episode 1030 | reward=0.43, length=220
+Finished episode 1040 | reward=0.54, length=132
+Finished episode 1050 | reward=0.70, length=299
+Finished episode 1060 | reward=0.37, length=267
+Finished episode 1070 | reward=0.26, length=171
+Finished episode 1080 | reward=0.94, length=214
+Finished episode 1090 | reward=-0.13, length=141
+Finished episode 1100 | reward=0.45, length=267
+Episode 1100/6000 - Epsilon: 0.050, Q-table: 63291 states
+Finished episode 1110 | reward=0.01, length=60
+Finished episode 1120 | reward=1.15, length=266
+Finished episode 1130 | reward=0.28, length=235
+Finished episode 1140 | reward=0.34, length=216
+Finished episode 1150 | reward=0.01, length=62
+Finished episode 1160 | reward=0.28, length=216
+Finished episode 1170 | reward=0.76, length=182
+Finished episode 1180 | reward=1.04, length=208
+Finished episode 1190 | reward=0.43, length=229
+Finished episode 1200 | reward=0.36, length=253
+Episode 1200/6000 - Epsilon: 0.050, Q-table: 63520 states
+Finished episode 1210 | reward=0.76, length=201
+Finished episode 1220 | reward=0.58, length=222
+Finished episode 1230 | reward=1.32, length=212
+Finished episode 1240 | reward=0.88, length=195
+Finished episode 1250 | reward=0.63, length=192
+Finished episode 1260 | reward=0.51, length=202
+Finished episode 1270 | reward=1.02, length=213
+Finished episode 1280 | reward=0.20, length=303
+Finished episode 1290 | reward=0.31, length=117
+Finished episode 1300 | reward=0.11, length=152
+Episode 1300/6000 - Epsilon: 0.050, Q-table: 63731 states
+Finished episode 1310 | reward=-0.10, length=125
+Finished episode 1320 | reward=1.22, length=191
+Finished episode 1330 | reward=1.35, length=243
+Finished episode 1340 | reward=0.42, length=167
+Finished episode 1350 | reward=1.37, length=223
+Finished episode 1360 | reward=0.48, length=181
+Finished episode 1370 | reward=0.20, length=261
+Finished episode 1380 | reward=1.60, length=171
+Finished episode 1390 | reward=0.38, length=271
+Finished episode 1400 | reward=0.43, length=222
+Episode 1400/6000 - Epsilon: 0.050, Q-table: 63952 states
+Finished episode 1410 | reward=-0.06, length=103
+Finished episode 1420 | reward=0.41, length=224
+Finished episode 1430 | reward=-0.19, length=90
+Finished episode 1440 | reward=0.17, length=113
+Finished episode 1450 | reward=0.38, length=107
+Finished episode 1460 | reward=0.08, length=125
+Finished episode 1470 | reward=0.64, length=151
+Finished episode 1480 | reward=0.04, length=179
+Finished episode 1490 | reward=0.57, length=195
+Finished episode 1500 | reward=1.12, length=281
+Evaluation: 17/50 wins (34.0%)
+  Avg Reward: 0.64
+  Unknown States: 0.0% (0/6)
+  Avg Q(HIT): 0.06, Avg Q(STAY): 0.07
+Episode 1500/6000
+  Avg Reward: 0.52, Avg Length: 199.3
+  Win Rate: 34.0%, Epsilon: 0.050
+  Q-table size: 64318
+  Overall Win Rate: 20.1%
+------------------------------------------------------------
+Finished episode 1510 | reward=0.37, length=223
+Finished episode 1520 | reward=0.35, length=185
+Finished episode 1530 | reward=1.33, length=182
+Finished episode 1540 | reward=0.83, length=279
+Finished episode 1550 | reward=1.29, length=216
+Finished episode 1560 | reward=0.94, length=236
+Finished episode 1570 | reward=1.48, length=164
+Finished episode 1580 | reward=0.50, length=233
+Finished episode 1590 | reward=0.73, length=204
+Finished episode 1600 | reward=0.35, length=252
+Episode 1600/6000 - Epsilon: 0.050, Q-table: 64586 states
+Finished episode 1610 | reward=0.01, length=49
+Finished episode 1620 | reward=0.48, length=229
+Finished episode 1630 | reward=-0.02, length=117
+Finished episode 1640 | reward=-0.09, length=117
+Finished episode 1650 | reward=1.17, length=197
+Finished episode 1660 | reward=0.58, length=164
+Finished episode 1670 | reward=0.40, length=243
+Finished episode 1680 | reward=1.11, length=224
+Finished episode 1690 | reward=0.14, length=217
+Finished episode 1700 | reward=0.01, length=76
+Episode 1700/6000 - Epsilon: 0.050, Q-table: 64792 states
+Finished episode 1710 | reward=0.99, length=225
+Finished episode 1720 | reward=0.84, length=185
+Finished episode 1730 | reward=1.28, length=208
+Finished episode 1740 | reward=0.44, length=217
+Finished episode 1750 | reward=0.39, length=157
+Finished episode 1760 | reward=0.06, length=271
+Finished episode 1770 | reward=0.14, length=129
+Finished episode 1780 | reward=1.14, length=185
+Finished episode 1790 | reward=1.10, length=177
+Finished episode 1800 | reward=0.17, length=201
+Episode 1800/6000 - Epsilon: 0.050, Q-table: 65028 states
+Finished episode 1810 | reward=0.14, length=94
+Finished episode 1820 | reward=0.39, length=131
+Finished episode 1830 | reward=0.01, length=142
+Finished episode 1840 | reward=0.71, length=194
+Finished episode 1850 | reward=0.17, length=226
+Finished episode 1860 | reward=1.32, length=179
+Finished episode 1870 | reward=-0.20, length=149
+Finished episode 1880 | reward=0.38, length=240
+Finished episode 1890 | reward=0.34, length=222
+Finished episode 1900 | reward=0.47, length=259
+Episode 1900/6000 - Epsilon: 0.050, Q-table: 65258 states
+Finished episode 1910 | reward=0.72, length=181
+Finished episode 1920 | reward=1.44, length=244
+Finished episode 1930 | reward=1.37, length=157
+Finished episode 1940 | reward=1.24, length=198
+Finished episode 1950 | reward=1.44, length=268
+Finished episode 1960 | reward=0.42, length=172
+Finished episode 1970 | reward=0.44, length=219
+Finished episode 1980 | reward=0.67, length=223
+Finished episode 1990 | reward=0.97, length=197
+Finished episode 2000 | reward=1.34, length=188
+Evaluation: 7/50 wins (14.0%)
+  Avg Reward: 0.43
+  Unknown States: 0.0% (0/15)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.03
+Episode 2000/6000
+  Avg Reward: 0.56, Avg Length: 198.3
+  Win Rate: 14.0%, Epsilon: 0.050
+  Q-table size: 65572
+  Overall Win Rate: 21.6%
+------------------------------------------------------------
+Finished episode 2010 | reward=1.07, length=216
+Finished episode 2020 | reward=0.49, length=174
+Finished episode 2030 | reward=0.60, length=260
+Finished episode 2040 | reward=1.49, length=202
+Finished episode 2050 | reward=0.28, length=191
+Finished episode 2060 | reward=0.02, length=136
+Finished episode 2070 | reward=0.01, length=91
+Finished episode 2080 | reward=-0.03, length=137
+Finished episode 2090 | reward=0.23, length=244
+Finished episode 2100 | reward=-0.01, length=280
+Episode 2100/6000 - Epsilon: 0.050, Q-table: 65809 states
+Finished episode 2110 | reward=0.99, length=264
+Finished episode 2120 | reward=0.58, length=168
+Finished episode 2130 | reward=0.41, length=199
+Finished episode 2140 | reward=0.27, length=186
+Finished episode 2150 | reward=0.55, length=209
+Finished episode 2160 | reward=0.47, length=152
+Finished episode 2170 | reward=0.61, length=232
+Finished episode 2180 | reward=1.39, length=185
+Finished episode 2190 | reward=0.01, length=142
+Finished episode 2200 | reward=1.21, length=212
+Episode 2200/6000 - Epsilon: 0.050, Q-table: 66030 states
+Finished episode 2210 | reward=0.19, length=194
+Finished episode 2220 | reward=0.23, length=301
+Finished episode 2230 | reward=0.14, length=283
+Finished episode 2240 | reward=0.34, length=201
+Finished episode 2250 | reward=0.49, length=218
+Finished episode 2260 | reward=0.63, length=203
+Finished episode 2270 | reward=0.43, length=159
+Finished episode 2280 | reward=0.69, length=268
+Finished episode 2290 | reward=-0.10, length=172
+Finished episode 2300 | reward=0.27, length=136
+Episode 2300/6000 - Epsilon: 0.050, Q-table: 66237 states
+Finished episode 2310 | reward=0.46, length=172
+Finished episode 2320 | reward=0.10, length=45
+Finished episode 2330 | reward=0.58, length=234
+Finished episode 2340 | reward=0.36, length=235
+Finished episode 2350 | reward=0.14, length=155
+Finished episode 2360 | reward=0.37, length=121
+Finished episode 2370 | reward=1.13, length=224
+Finished episode 2380 | reward=0.36, length=250
+Finished episode 2390 | reward=0.49, length=142
+Finished episode 2400 | reward=0.67, length=187
+Episode 2400/6000 - Epsilon: 0.050, Q-table: 66440 states
+Finished episode 2410 | reward=0.23, length=148
+Finished episode 2420 | reward=1.11, length=219
+Finished episode 2430 | reward=0.34, length=238
+Finished episode 2440 | reward=0.61, length=145
+Finished episode 2450 | reward=1.14, length=212
+Finished episode 2460 | reward=0.17, length=287
+Finished episode 2470 | reward=0.40, length=175
+Finished episode 2480 | reward=0.77, length=188
+Finished episode 2490 | reward=0.45, length=239
+Finished episode 2500 | reward=0.45, length=252
+Evaluation: 11/50 wins (22.0%)
+  Avg Reward: 0.54
+  Unknown States: 0.0% (0/32)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.03
+Episode 2500/6000
+  Avg Reward: 0.51, Avg Length: 195.2
+  Win Rate: 22.0%, Epsilon: 0.050
+  Q-table size: 66755
+  Overall Win Rate: 21.4%
+------------------------------------------------------------
+Finished episode 2510 | reward=1.42, length=209
+Finished episode 2520 | reward=0.19, length=155
+Finished episode 2530 | reward=0.89, length=161
+Finished episode 2540 | reward=0.04, length=140
+Finished episode 2550 | reward=0.87, length=168
+Finished episode 2560 | reward=1.36, length=178
+Finished episode 2570 | reward=0.29, length=225
+Finished episode 2580 | reward=0.71, length=169
+Finished episode 2590 | reward=0.88, length=243
+Finished episode 2600 | reward=1.08, length=288
+Episode 2600/6000 - Epsilon: 0.050, Q-table: 66991 states
+Finished episode 2610 | reward=0.37, length=259
+Finished episode 2620 | reward=1.40, length=225
+Finished episode 2630 | reward=0.13, length=142
+Finished episode 2640 | reward=1.05, length=209
+Finished episode 2650 | reward=1.44, length=191
+Finished episode 2660 | reward=0.54, length=167
+Finished episode 2670 | reward=1.27, length=208
+Finished episode 2680 | reward=0.44, length=203
+Finished episode 2690 | reward=1.12, length=237
+Finished episode 2700 | reward=0.33, length=140
+Episode 2700/6000 - Epsilon: 0.050, Q-table: 67150 states
+Finished episode 2710 | reward=0.37, length=144
+Finished episode 2720 | reward=0.30, length=273
+Finished episode 2730 | reward=-0.39, length=126
+Finished episode 2740 | reward=1.35, length=266
+Finished episode 2750 | reward=0.05, length=301
+Finished episode 2760 | reward=0.83, length=163
+Finished episode 2770 | reward=0.44, length=249
+Finished episode 2780 | reward=0.62, length=222
+Finished episode 2790 | reward=0.39, length=224
+Finished episode 2800 | reward=0.41, length=207
+Episode 2800/6000 - Epsilon: 0.050, Q-table: 67385 states
+Finished episode 2810 | reward=0.80, length=195
+Finished episode 2820 | reward=0.83, length=246
+Finished episode 2830 | reward=0.27, length=170
+Finished episode 2840 | reward=1.29, length=227
+Finished episode 2850 | reward=0.17, length=277
+Finished episode 2860 | reward=0.45, length=222
+Finished episode 2870 | reward=1.03, length=234
+Finished episode 2880 | reward=0.14, length=152
+Finished episode 2890 | reward=0.81, length=149
+Finished episode 2900 | reward=1.23, length=185
+Episode 2900/6000 - Epsilon: 0.050, Q-table: 67564 states
+Finished episode 2910 | reward=0.31, length=176
+Finished episode 2920 | reward=1.09, length=156
+Finished episode 2930 | reward=1.40, length=178
+Finished episode 2940 | reward=0.49, length=244
+Finished episode 2950 | reward=1.10, length=214
+Finished episode 2960 | reward=0.75, length=279
+Finished episode 2970 | reward=0.40, length=316
+Finished episode 2980 | reward=0.23, length=135
+Finished episode 2990 | reward=0.04, length=190
+Finished episode 3000 | reward=0.35, length=296
+Evaluation: 9/50 wins (18.0%)
+  Avg Reward: 0.51
+  Unknown States: 0.0% (0/48)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 3000/6000
+  Avg Reward: 0.54, Avg Length: 195.4
+  Win Rate: 18.0%, Epsilon: 0.050
+  Q-table size: 67880
+  Overall Win Rate: 21.3%
+------------------------------------------------------------
+Finished episode 3010 | reward=0.54, length=228
+Finished episode 3020 | reward=0.25, length=247
+Finished episode 3030 | reward=0.27, length=200
+Finished episode 3040 | reward=0.22, length=174
+Finished episode 3050 | reward=0.64, length=200
+Finished episode 3060 | reward=0.24, length=219
+Finished episode 3070 | reward=0.25, length=370
+Finished episode 3080 | reward=0.34, length=236
+Finished episode 3090 | reward=0.66, length=180
+Finished episode 3100 | reward=0.62, length=166
+Episode 3100/6000 - Epsilon: 0.050, Q-table: 68075 states
+Finished episode 3110 | reward=0.70, length=183
+Finished episode 3120 | reward=0.13, length=154
+Finished episode 3130 | reward=0.44, length=213
+Finished episode 3140 | reward=1.19, length=227
+Finished episode 3150 | reward=0.50, length=184
+Finished episode 3160 | reward=0.28, length=277
+Finished episode 3170 | reward=0.18, length=229
+Finished episode 3180 | reward=0.81, length=179
+Finished episode 3190 | reward=0.75, length=220
+Finished episode 3200 | reward=0.61, length=187
+Episode 3200/6000 - Epsilon: 0.050, Q-table: 68265 states
+Finished episode 3210 | reward=-0.11, length=183
+Finished episode 3220 | reward=0.72, length=147
+Finished episode 3230 | reward=0.53, length=207
+Finished episode 3240 | reward=0.13, length=266
+Finished episode 3250 | reward=0.58, length=237
+Finished episode 3260 | reward=0.81, length=173
+Finished episode 3270 | reward=0.58, length=220
+Finished episode 3280 | reward=0.45, length=302
+Finished episode 3290 | reward=0.73, length=197
+Finished episode 3300 | reward=0.66, length=186
+Episode 3300/6000 - Epsilon: 0.050, Q-table: 68488 states
+Finished episode 3310 | reward=-0.02, length=122
+Finished episode 3320 | reward=1.33, length=230
+Finished episode 3330 | reward=-0.07, length=302
+Finished episode 3340 | reward=1.23, length=204
+Finished episode 3350 | reward=0.65, length=199
+Finished episode 3360 | reward=0.21, length=295
+Finished episode 3370 | reward=0.43, length=216
+Finished episode 3380 | reward=0.14, length=250
+Finished episode 3390 | reward=-0.36, length=160
+Finished episode 3400 | reward=0.41, length=239
+Episode 3400/6000 - Epsilon: 0.050, Q-table: 68701 states
+Finished episode 3410 | reward=0.01, length=40
+Finished episode 3420 | reward=0.41, length=217
+Finished episode 3430 | reward=0.79, length=178
+Finished episode 3440 | reward=0.27, length=200
+Finished episode 3450 | reward=1.25, length=173
+Finished episode 3460 | reward=0.75, length=191
+Finished episode 3470 | reward=1.13, length=247
+Finished episode 3480 | reward=-0.17, length=179
+Finished episode 3490 | reward=-0.23, length=135
+Finished episode 3500 | reward=1.22, length=244
+Evaluation: 16/50 wins (32.0%)
+  Avg Reward: 0.57
+  Unknown States: 0.0% (0/53)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.03
+Episode 3500/6000
+  Avg Reward: 0.52, Avg Length: 197.6
+  Win Rate: 32.0%, Epsilon: 0.050
+  Q-table size: 69021
+  Overall Win Rate: 21.3%
+------------------------------------------------------------
+Finished episode 3510 | reward=0.46, length=182
+Finished episode 3520 | reward=0.14, length=112
+Finished episode 3530 | reward=0.36, length=213
+Finished episode 3540 | reward=0.61, length=214
+Finished episode 3550 | reward=0.58, length=186
+Finished episode 3560 | reward=0.40, length=198
+Finished episode 3570 | reward=0.06, length=292
+Finished episode 3580 | reward=0.01, length=105
+Finished episode 3590 | reward=-0.37, length=136
+Finished episode 3600 | reward=0.24, length=221
+Episode 3600/6000 - Epsilon: 0.050, Q-table: 69243 states
+Finished episode 3610 | reward=1.27, length=226
+Finished episode 3620 | reward=0.24, length=236
+Finished episode 3630 | reward=0.29, length=131
+Finished episode 3640 | reward=1.29, length=186
+Finished episode 3650 | reward=0.21, length=224
+Finished episode 3660 | reward=0.34, length=260
+Finished episode 3670 | reward=1.00, length=222
+Finished episode 3680 | reward=1.32, length=244
+Finished episode 3690 | reward=0.93, length=159
+Finished episode 3700 | reward=0.25, length=324
+Episode 3700/6000 - Epsilon: 0.050, Q-table: 69460 states
+Finished episode 3710 | reward=-0.22, length=76
+Finished episode 3720 | reward=0.26, length=186
+Finished episode 3730 | reward=0.78, length=192
+Finished episode 3740 | reward=0.30, length=116
+Finished episode 3750 | reward=0.57, length=231
+Finished episode 3760 | reward=1.11, length=208
+Finished episode 3770 | reward=0.22, length=151
+Finished episode 3780 | reward=0.28, length=192
+Finished episode 3790 | reward=1.48, length=173
+Finished episode 3800 | reward=0.39, length=243
+Episode 3800/6000 - Epsilon: 0.050, Q-table: 69719 states
+Finished episode 3810 | reward=-0.41, length=158
+Finished episode 3820 | reward=0.27, length=235
+Finished episode 3830 | reward=0.67, length=220
+Finished episode 3840 | reward=0.18, length=306
+Finished episode 3850 | reward=-0.44, length=141
+Finished episode 3860 | reward=1.05, length=220
+Finished episode 3870 | reward=0.49, length=201
+Finished episode 3880 | reward=0.36, length=215
+Finished episode 3890 | reward=0.37, length=232
+Finished episode 3900 | reward=0.55, length=204
+Episode 3900/6000 - Epsilon: 0.050, Q-table: 69906 states
+Finished episode 3910 | reward=0.56, length=213
+Finished episode 3920 | reward=1.06, length=243
+Finished episode 3930 | reward=0.28, length=292
+Finished episode 3940 | reward=0.26, length=135
+Finished episode 3950 | reward=1.13, length=213
+Finished episode 3960 | reward=0.12, length=101
+Finished episode 3970 | reward=0.68, length=176
+Finished episode 3980 | reward=0.45, length=228
+Finished episode 3990 | reward=0.05, length=174
+Finished episode 4000 | reward=0.35, length=238
+Evaluation: 10/50 wins (20.0%)
+  Avg Reward: 0.50
+  Unknown States: 0.0% (0/41)
+  Avg Q(HIT): 0.02, Avg Q(STAY): 0.03
+Episode 4000/6000
+  Avg Reward: 0.52, Avg Length: 194.8
+  Win Rate: 20.0%, Epsilon: 0.050
+  Q-table size: 70189
+  Overall Win Rate: 21.5%
+------------------------------------------------------------
+Finished episode 4010 | reward=0.36, length=144
+Finished episode 4020 | reward=0.04, length=132
+Finished episode 4030 | reward=0.90, length=258
+Finished episode 4040 | reward=0.34, length=142
+Finished episode 4050 | reward=0.13, length=112
+Finished episode 4060 | reward=1.00, length=216
+Finished episode 4070 | reward=0.34, length=149
+Finished episode 4080 | reward=0.15, length=127
+Finished episode 4090 | reward=0.41, length=240
+Finished episode 4100 | reward=0.56, length=223
+Episode 4100/6000 - Epsilon: 0.050, Q-table: 70400 states
+Finished episode 4110 | reward=0.01, length=86
+Finished episode 4120 | reward=-0.23, length=82
+Finished episode 4130 | reward=0.54, length=190
+Finished episode 4140 | reward=0.46, length=205
+Finished episode 4150 | reward=0.44, length=129
+Finished episode 4160 | reward=1.69, length=141
+Finished episode 4170 | reward=-0.11, length=125
+Finished episode 4180 | reward=-0.02, length=115
+Finished episode 4190 | reward=1.23, length=244
+Finished episode 4200 | reward=0.39, length=203
+Episode 4200/6000 - Epsilon: 0.050, Q-table: 70609 states
+Finished episode 4210 | reward=0.17, length=156
+Finished episode 4220 | reward=0.56, length=177
+Finished episode 4230 | reward=0.28, length=220
+Finished episode 4240 | reward=0.41, length=288
+Finished episode 4250 | reward=0.42, length=195
+Finished episode 4260 | reward=0.29, length=225
+Finished episode 4270 | reward=1.09, length=230
+Finished episode 4280 | reward=1.05, length=206
+Finished episode 4290 | reward=1.36, length=171
+Finished episode 4300 | reward=0.96, length=245
+Episode 4300/6000 - Epsilon: 0.050, Q-table: 70843 states
+Finished episode 4310 | reward=0.23, length=207
+Finished episode 4320 | reward=0.62, length=181
+Finished episode 4330 | reward=0.96, length=141
+Finished episode 4340 | reward=0.06, length=271
+Finished episode 4350 | reward=1.05, length=198
+Finished episode 4360 | reward=0.67, length=156
+Finished episode 4370 | reward=1.20, length=223
+Finished episode 4380 | reward=-0.10, length=204
+Finished episode 4390 | reward=1.21, length=200
+Finished episode 4400 | reward=1.52, length=168
+Episode 4400/6000 - Epsilon: 0.050, Q-table: 71039 states
+Finished episode 4410 | reward=0.47, length=251
+Finished episode 4420 | reward=0.33, length=257
+Finished episode 4430 | reward=-0.07, length=189
+Finished episode 4440 | reward=0.28, length=260
+Finished episode 4450 | reward=0.38, length=153
+Finished episode 4460 | reward=0.38, length=210
+Finished episode 4470 | reward=0.31, length=278
+Finished episode 4480 | reward=0.13, length=166
+Finished episode 4490 | reward=0.68, length=200
+Finished episode 4500 | reward=0.28, length=173
+Evaluation: 12/50 wins (24.0%)
+  Avg Reward: 0.55
+  Unknown States: 0.0% (0/43)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.03
+Episode 4500/6000
+  Avg Reward: 0.56, Avg Length: 195.2
+  Win Rate: 24.0%, Epsilon: 0.050
+  Q-table size: 71318
+  Overall Win Rate: 21.9%
+------------------------------------------------------------
+Finished episode 4510 | reward=0.34, length=226
+Finished episode 4520 | reward=0.70, length=146
+Finished episode 4530 | reward=0.31, length=139
+Finished episode 4540 | reward=1.18, length=188
+Finished episode 4550 | reward=0.74, length=175
+Finished episode 4560 | reward=0.55, length=150
+Finished episode 4570 | reward=0.52, length=234
+Finished episode 4580 | reward=1.32, length=177
+Finished episode 4590 | reward=1.19, length=219
+Finished episode 4600 | reward=0.16, length=212
+Episode 4600/6000 - Epsilon: 0.050, Q-table: 71559 states
+Finished episode 4610 | reward=-0.09, length=213
+Finished episode 4620 | reward=0.63, length=204
+Finished episode 4630 | reward=0.33, length=202
+Finished episode 4640 | reward=0.15, length=95
+Finished episode 4650 | reward=0.30, length=169
+Finished episode 4660 | reward=0.70, length=184
+Finished episode 4670 | reward=0.80, length=236
+Finished episode 4680 | reward=0.50, length=222
+Finished episode 4690 | reward=0.09, length=121
+Finished episode 4700 | reward=0.29, length=239
+Episode 4700/6000 - Epsilon: 0.050, Q-table: 71730 states
+Finished episode 4710 | reward=0.35, length=213
+Finished episode 4720 | reward=0.25, length=166
+Finished episode 4730 | reward=0.11, length=300
+Finished episode 4740 | reward=0.93, length=235
+Finished episode 4750 | reward=0.49, length=236
+Finished episode 4760 | reward=0.03, length=155
+Finished episode 4770 | reward=0.37, length=253
+Finished episode 4780 | reward=0.12, length=175
+Finished episode 4790 | reward=0.09, length=100
+Finished episode 4800 | reward=1.43, length=223
+Episode 4800/6000 - Epsilon: 0.050, Q-table: 71925 states
+Finished episode 4810 | reward=1.31, length=167
+Finished episode 4820 | reward=1.13, length=199
+Finished episode 4830 | reward=0.31, length=202
+Finished episode 4840 | reward=1.35, length=215
+Finished episode 4850 | reward=0.39, length=219
+Finished episode 4860 | reward=0.50, length=156
+Finished episode 4870 | reward=0.65, length=147
+Finished episode 4880 | reward=0.52, length=216
+Finished episode 4890 | reward=0.26, length=274
+Finished episode 4900 | reward=0.49, length=205
+Episode 4900/6000 - Epsilon: 0.050, Q-table: 72103 states
+Finished episode 4910 | reward=1.36, length=157
+Finished episode 4920 | reward=0.74, length=185
+Finished episode 4930 | reward=0.42, length=145
+Finished episode 4940 | reward=0.51, length=196
+Finished episode 4950 | reward=0.53, length=276
+Finished episode 4960 | reward=0.32, length=265
+Finished episode 4970 | reward=-0.10, length=136
+Finished episode 4980 | reward=0.48, length=189
+Finished episode 4990 | reward=1.12, length=243
+Finished episode 5000 | reward=0.47, length=232
+Evaluation: 12/50 wins (24.0%)
+  Avg Reward: 0.56
+  Unknown States: 0.0% (0/51)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.03
+Episode 5000/6000
+  Avg Reward: 0.55, Avg Length: 195.1
+  Win Rate: 24.0%, Epsilon: 0.050
+  Q-table size: 72330
+  Overall Win Rate: 22.0%
+------------------------------------------------------------
+Finished episode 5010 | reward=0.35, length=212
+Finished episode 5020 | reward=0.35, length=281
+Finished episode 5030 | reward=0.42, length=213
+Finished episode 5040 | reward=0.08, length=133
+Finished episode 5050 | reward=-0.00, length=146
+Finished episode 5060 | reward=1.37, length=259
+Finished episode 5070 | reward=0.91, length=283
+Finished episode 5080 | reward=0.30, length=308
+Finished episode 5090 | reward=0.28, length=259
+Finished episode 5100 | reward=1.24, length=211
+Episode 5100/6000 - Epsilon: 0.050, Q-table: 72518 states
+Finished episode 5110 | reward=0.27, length=277
+Finished episode 5120 | reward=0.28, length=212
+Finished episode 5130 | reward=0.37, length=257
+Finished episode 5140 | reward=0.50, length=241
+Finished episode 5150 | reward=-0.03, length=181
+Finished episode 5160 | reward=0.83, length=191
+Finished episode 5170 | reward=0.59, length=176
+Finished episode 5180 | reward=0.28, length=127
+Finished episode 5190 | reward=0.33, length=201
+Finished episode 5200 | reward=0.45, length=152
+Episode 5200/6000 - Epsilon: 0.050, Q-table: 72722 states
+Finished episode 5210 | reward=0.32, length=264
+Finished episode 5220 | reward=0.37, length=213
+Finished episode 5230 | reward=-0.18, length=163
+Finished episode 5240 | reward=0.32, length=151
+Finished episode 5250 | reward=0.56, length=199
+Finished episode 5260 | reward=1.34, length=184
+Finished episode 5270 | reward=0.49, length=207
+Finished episode 5280 | reward=0.26, length=103
+Finished episode 5290 | reward=0.35, length=215
+Finished episode 5300 | reward=0.09, length=123
+Episode 5300/6000 - Epsilon: 0.050, Q-table: 72920 states
+Finished episode 5310 | reward=0.39, length=165
+Finished episode 5320 | reward=0.30, length=233
+Finished episode 5330 | reward=0.35, length=85
+Finished episode 5340 | reward=1.06, length=223
+Finished episode 5350 | reward=0.22, length=111
+Finished episode 5360 | reward=1.22, length=203
+Finished episode 5370 | reward=0.34, length=253
+Finished episode 5380 | reward=1.45, length=200
+Finished episode 5390 | reward=1.44, length=185
+Finished episode 5400 | reward=0.07, length=67
+Episode 5400/6000 - Epsilon: 0.050, Q-table: 73113 states
+Finished episode 5410 | reward=0.97, length=210
+Finished episode 5420 | reward=1.26, length=189
+Finished episode 5430 | reward=1.04, length=219
+Finished episode 5440 | reward=0.83, length=145
+Finished episode 5450 | reward=1.30, length=184
+Finished episode 5460 | reward=0.00, length=134
+Finished episode 5470 | reward=0.43, length=260
+Finished episode 5480 | reward=0.58, length=198
+Finished episode 5490 | reward=1.07, length=249
+Finished episode 5500 | reward=0.52, length=245
+Evaluation: 17/50 wins (34.0%)
+  Avg Reward: 0.65
+  Unknown States: 0.0% (0/40)
+  Avg Q(HIT): 0.03, Avg Q(STAY): 0.03
+Episode 5500/6000
+  Avg Reward: 0.54, Avg Length: 193.5
+  Win Rate: 34.0%, Epsilon: 0.050
+  Q-table size: 73371
+  Overall Win Rate: 21.9%
+------------------------------------------------------------
+Finished episode 5510 | reward=0.13, length=206
+Finished episode 5520 | reward=0.74, length=199
+Finished episode 5530 | reward=0.73, length=220
+Finished episode 5540 | reward=0.57, length=238
+Finished episode 5550 | reward=1.08, length=240
+Finished episode 5560 | reward=1.27, length=212
+Finished episode 5570 | reward=0.36, length=161
+Finished episode 5580 | reward=0.12, length=99
+Finished episode 5590 | reward=0.20, length=150
+Finished episode 5600 | reward=1.19, length=232
+Episode 5600/6000 - Epsilon: 0.050, Q-table: 73564 states
+Finished episode 5610 | reward=0.31, length=205
+Finished episode 5620 | reward=0.32, length=238
+Finished episode 5630 | reward=0.53, length=221
+Finished episode 5640 | reward=0.14, length=198
+Finished episode 5650 | reward=-0.27, length=191
+Finished episode 5660 | reward=-0.01, length=152
+Finished episode 5670 | reward=1.16, length=235
+Finished episode 5680 | reward=0.27, length=170
+Finished episode 5690 | reward=0.47, length=249
+Finished episode 5700 | reward=0.40, length=225
+Episode 5700/6000 - Epsilon: 0.050, Q-table: 73704 states
+Finished episode 5710 | reward=0.15, length=156
+Finished episode 5720 | reward=1.09, length=223
+Finished episode 5730 | reward=0.68, length=193
+Finished episode 5740 | reward=0.59, length=204
+Finished episode 5750 | reward=0.40, length=212
+Finished episode 5760 | reward=-0.13, length=206
+Finished episode 5770 | reward=0.73, length=165
+Finished episode 5780 | reward=0.30, length=234
+Finished episode 5790 | reward=1.41, length=227
+Finished episode 5800 | reward=0.02, length=88
+Episode 5800/6000 - Epsilon: 0.050, Q-table: 73897 states
+Finished episode 5810 | reward=0.51, length=212
+Finished episode 5820 | reward=0.42, length=213
+Finished episode 5830 | reward=0.17, length=154
+Finished episode 5840 | reward=0.41, length=296
+Finished episode 5850 | reward=0.56, length=223
+Finished episode 5860 | reward=1.10, length=214
+Finished episode 5870 | reward=0.59, length=202
+Finished episode 5880 | reward=0.30, length=202
+Finished episode 5890 | reward=0.59, length=174
+Finished episode 5900 | reward=0.37, length=198
+Episode 5900/6000 - Epsilon: 0.050, Q-table: 74086 states
+Finished episode 5910 | reward=0.60, length=189
+Finished episode 5920 | reward=0.01, length=91
+Finished episode 5930 | reward=1.59, length=182
+Finished episode 5940 | reward=1.13, length=218
+Finished episode 5950 | reward=0.57, length=163
+Finished episode 5960 | reward=0.40, length=210
+Finished episode 5970 | reward=0.69, length=274
+Finished episode 5980 | reward=0.15, length=137
+Finished episode 5990 | reward=-0.29, length=151
+Finished episode 6000 | reward=1.08, length=209
+Evaluation: 9/50 wins (18.0%)
+  Avg Reward: 0.46
+  Unknown States: 0.0% (0/56)
+  Avg Q(HIT): 0.04, Avg Q(STAY): 0.04
+Episode 6000/6000
+  Avg Reward: 0.58, Avg Length: 198.6
+  Win Rate: 18.0%, Epsilon: 0.050
+  Q-table size: 74385
+  Overall Win Rate: 22.3%
+------------------------------------------------------------
+
+Training completed in 30.5 seconds
+Final epsilon: 0.050
+Final Q-table size: 74385 states
+Overall win rate: 22.3%
+
+======================================================================
+FINAL EVALUATION
+======================================================================
+Win rate vs Random: 24.0%
+Win rate vs Conservative: 21.0%
+Win rate vs Heuristic: 35.0%
+
+Saved Q-table to q_table_curriculum.pkl
+Final Q-table size: 74929 states
+
+======================================================================
+Curriculum Learning Completed at 2025-11-27 17:21:56
+Output saved to: curriculum_training_20251127_172023.log
+======================================================================
+

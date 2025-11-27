@@ -111,18 +111,48 @@ class Flip7RLEnv:
         current_player = self.game.get_current_player()
         agent_player = self.game.players[self.agent_index]
         
-        # If it's not the agent's turn, simulate opponent actions
+        # If it's not the agent's turn, simulate opponent actions until agent's turn or game ends
         if current_player != agent_player:
-            # Opponent's turn - use simple heuristic (will be replaced by actual agents)
-            # For now, just advance the game
+            # Simulate ONE opponent turn (the environment will be called again if needed)
             self._simulate_opponent_turn()
+            
+            # Check if round ended after opponent's action
+            round_ended = not self.game.round_active
+            if round_ended and not self.game.is_game_over():
+                # Start new round
+                self.game.start_new_round()
+            
             state = self.get_state()
             reward = 0.0
             done = self.game.is_game_over()
             info = {
                 'round_number': self.game.round_number,
                 'round_active': self.game.round_active,
+                'round_ended': round_ended,
                 'game_over': done
+            }
+            return state, reward, done, info
+        
+        # Check if agent has already ended their turn
+        if agent_player.has_stayed or agent_player.is_busted:
+            # Agent has already ended turn - check if round should end
+            # Force check round end conditions
+            self.game._check_round_end_conditions()
+            
+            # If round ended, handle it
+            round_ended = not self.game.round_active
+            if round_ended and not self.game.is_game_over():
+                self.game.start_new_round()
+            
+            state = self.get_state()
+            reward = 0.0
+            done = self.game.is_game_over()
+            info = {
+                'round_number': self.game.round_number,
+                'round_active': self.game.round_active,
+                'round_ended': round_ended,
+                'game_over': done,
+                'message': 'Agent already ended turn'
             }
             return state, reward, done, info
         
@@ -137,11 +167,18 @@ class Flip7RLEnv:
             raise ValueError(f"Invalid action: {action}. Must be 0 (Hit) or 1 (Stay).")
         
         if not success:
-            # Invalid action - small penalty
+            # Invalid action - check if we should end round or advance turn
+            # This might happen if action failed but round should end
+            self.game._check_round_end_conditions()
+            
+            round_ended = not self.game.round_active
+            if round_ended and not self.game.is_game_over():
+                self.game.start_new_round()
+            
             state = self.get_state()
             reward = -1.0
             done = self.game.is_game_over()
-            info = {'error': message, 'game_over': done}
+            info = {'error': message, 'game_over': done, 'round_ended': round_ended}
             return state, reward, done, info
         
         # Calculate reward
@@ -177,37 +214,83 @@ class Flip7RLEnv:
         return state, reward, done, info
     
     def _simulate_opponent_turn(self):
-        """Simulate opponent's turn using agent or simple heuristic."""
-        current_player = self.game.get_current_player()
-        current_player_index = self.game.current_player_index
+        """
+        Simulate opponent turns until it's the agent's turn or the round/game ends.
         
-        if current_player.has_stayed or current_player.is_busted:
-            self.game.next_turn()
-            return
+        This function will continue simulating opponent actions until:
+        - It's the agent's turn
+        - The round ends (all players have stayed/busted)
+        - The game ends
+        """
+        max_iterations = 20  # Safety limit to prevent infinite loops
+        iterations = 0
         
-        # Find which opponent this is
-        opponent_idx = 0 if current_player_index < self.agent_index else 1
-        opponent_agent = self.opponent_agents[opponent_idx] if opponent_idx < len(self.opponent_agents) else None
-        
-        if opponent_agent is not None:
-            # Use agent to select action
-            state = self.get_state()
-            valid_actions = self.get_valid_actions()
-            action = opponent_agent.select_action(state, valid_actions)
+        while iterations < max_iterations:
+            iterations += 1
             
-            if action == self.ACTION_HIT:
-                self.game.hit()
-            else:
-                self.game.stay()
-        else:
-            # Simple heuristic: hit if hand value < 15, otherwise stay
-            number_cards = [card for card in current_player.hand if card.card_type == CardType.NUMBER]
-            hand_value = sum(card.value for card in number_cards)
+            # Check if round or game ended
+            if not self.game.round_active or self.game.is_game_over():
+                break
             
-            if hand_value < 15:
-                self.game.hit()
+            current_player = self.game.get_current_player()
+            current_player_index = self.game.current_player_index
+            
+            # If it's the agent's turn, we're done
+            if current_player_index == self.agent_index:
+                break
+            
+            # If current player has already ended their turn, advance
+            if current_player.has_stayed or current_player.is_busted:
+                self.game._check_round_end_conditions()
+                # After checking round end, it might be agent's turn or round might have ended
+                if not self.game.round_active or self.game.is_game_over():
+                    break
+                if self.game.get_current_player() == self.game.players[self.agent_index]:
+                    break
+                continue
+            
+            # Find which opponent this is
+            opponent_idx = 0 if current_player_index < self.agent_index else 1
+            opponent_agent = self.opponent_agents[opponent_idx] if opponent_idx < len(self.opponent_agents) else None
+            
+            # Determine valid actions for the current player (opponent)
+            valid_actions_for_opponent = [self.ACTION_HIT, self.ACTION_STAY]
+            
+            if opponent_agent is not None:
+                # Use agent to select action
+                state = self.get_state()  # This is agent's state, but opponent agents can ignore it
+                action = opponent_agent.select_action(state, valid_actions_for_opponent)
+                
+                if action == self.ACTION_HIT:
+                    success, _ = self.game.hit()
+                    if not success:
+                        # If hit failed, try staying
+                        self.game.stay()
+                else:
+                    success, _ = self.game.stay()
+                    if not success:
+                        # If stay failed, force advance
+                        self.game._check_round_end_conditions()
             else:
-                self.game.stay()
+                # Simple heuristic: hit if hand value < 15, otherwise stay
+                number_cards = [card for card in current_player.hand if card.card_type == CardType.NUMBER]
+                hand_value = sum(card.value for card in number_cards)
+                
+                if hand_value < 15:
+                    success, _ = self.game.hit()
+                    if not success:
+                        self.game.stay()
+                else:
+                    success, _ = self.game.stay()
+                    if not success:
+                        # If stay failed, force advance
+                        self.game._check_round_end_conditions()
+            
+            # After opponent action, check if round ended or it's now agent's turn
+            if not self.game.round_active or self.game.is_game_over():
+                break
+            if self.game.get_current_player() == self.game.players[self.agent_index]:
+                break
     
     def get_state(self) -> Tuple:
         """
@@ -314,15 +397,49 @@ class Flip7RLEnv:
         agent_player = self.game.players[self.agent_index]
         reward = 0.0
         
-        # Immediate rewards
-        if agent_player.is_busted:
-            reward -= 10.0  # Penalty for going bust
-        elif agent_player.seven_card_bonus:
-            reward += 50.0  # Large bonus for seven-card bonus
-        elif agent_player.has_stayed:
-            reward += 1.0  # Small positive for staying safely
+        # Calculate hand features
+        number_cards = [card for card in agent_player.hand if card.card_type == CardType.NUMBER]
+        modifier_cards = [card for card in agent_player.hand if card.card_type != CardType.NUMBER]
+        hand_value = sum(card.value for card in number_cards)
+        unique_numbers = len(set(card.value for card in number_cards))
+        num_cards = len(agent_player.hand)
         
-        # Round-end rewards
+        # Immediate rewards for actions (encourage exploration)
+        if agent_player.is_busted:
+            # Context-aware busting penalty
+            # Less penalty if busting with low hand (took a reasonable risk)
+            if hand_value <= 15:
+                reward -= 10.0  # Smaller penalty for reasonable risk
+            else:
+                reward -= 20.0  # Larger penalty for risky play with high hand
+        elif agent_player.seven_card_bonus:
+            reward += 150.0  # Large bonus for seven-card bonus
+        elif agent_player.has_stayed:
+            # Reward for staying based on hand quality
+            if hand_value >= 15:
+                reward += 3.0  # Good hand, smart to stay
+            elif hand_value >= 10:
+                reward += 1.5  # Decent hand
+            else:
+                reward += 0.2  # Low hand, but stayed (conservative)
+        else:
+            # Agent is still playing - reward good progress
+            # Reward for building toward a good hand
+            if hand_value < 15 and not agent_player.is_busted:
+                # Reward for hitting when it's safe to do so
+                if hand_value < 10:
+                    reward += 0.5  # Good to hit with low hand
+                elif hand_value < 12:
+                    reward += 0.3  # Still reasonable to hit
+                # No reward for hitting with high hand (risky)
+            
+            # Reward for collecting unique cards (progress toward 7-card bonus)
+            if unique_numbers >= 5:
+                reward += 1.0  # Getting close to 7-card bonus
+            elif unique_numbers >= 3:
+                reward += 0.3  # Making progress
+        
+        # Round-end rewards (more informative)
         if not self.game.round_active:
             agent_score = agent_player.round_score
             opponent_scores = [
@@ -331,20 +448,37 @@ class Flip7RLEnv:
             ]
             max_opponent_score = max(opponent_scores) if opponent_scores else 0
             
-            if agent_score > max_opponent_score:
-                reward += 20.0  # Bonus for winning round
-            elif agent_score < max_opponent_score:
-                reward -= 10.0  # Penalty for losing round
-            # Tie gives no additional reward
+            # Score difference reward (more granular)
+            score_diff = agent_score - max_opponent_score
+            if score_diff > 0:
+                # Winning round - reward proportional to margin
+                reward += 40.0 + min(score_diff * 2.0, 60.0)  # 40-100 points
+            elif score_diff < 0:
+                # Losing round - penalty proportional to margin
+                reward -= 20.0 + min(abs(score_diff) * 1.0, 40.0)  # -20 to -60 points
+            # Tie gives small positive
+            else:
+                reward += 8.0
         
-        # Game-end rewards
+        # Game-end rewards (scaled)
         if self.game.is_game_over():
             if self.game.get_winner() == agent_player:
-                reward += 100.0  # Large bonus for winning game
+                reward += 300.0  # Large bonus for winning game
             else:
-                reward -= 50.0  # Penalty for losing game
+                # Penalty based on how close we were
+                agent_final_score = agent_player.total_score
+                winner_score = self.game.get_winner().total_score if self.game.get_winner() else agent_final_score
+                score_gap = winner_score - agent_final_score
+                reward -= 60.0 + min(score_gap * 2.0, 120.0)  # -60 to -180 points
         
-        return reward
+        # Normalize reward to [-1, 1] range for stable learning
+        # Maximum possible reward: ~550 (game win + round win + seven-card bonus)
+        # Use 500 as normalization factor to keep rewards in reasonable range
+        normalized_reward = reward / 500.0
+        # Clip to prevent extreme values
+        normalized_reward = max(-1.0, min(1.0, normalized_reward))
+        
+        return normalized_reward
     
     def state_to_string(self, state: Tuple) -> str:
         """

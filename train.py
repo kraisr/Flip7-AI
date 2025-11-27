@@ -57,47 +57,69 @@ def train_agent(env: Flip7RLEnv, agent: QLearningAgent, num_episodes: int = 1000
         episode_length = 0
         done = False
         
-        # Store previous state/action for Q-learning update
-        prev_state = None
-        prev_action = None
-        prev_reward = 0.0
+        # Safety limit to prevent infinite loops
+        # Note: Full games can take 500-2000 steps depending on target score
+        max_steps_per_episode = 2000
+        step_count = 0
         
-        while not done:
-            # Get valid actions
+        while not done and step_count < max_steps_per_episode:
+            step_count += 1
+            
+            # Get valid actions for the agent's current turn
             valid_actions = env.get_valid_actions()
             
-            # If no valid actions, wait for next turn
+            # Handle no valid actions (e.g., it's opponents' turns or agent has ended turn)
             if not valid_actions:
-                # Simulate opponent turns until agent can act
-                while not done and not env.get_valid_actions():
-                    state, reward, done, info = env.step(0)  # Dummy action
-                    episode_length += 1
-                continue
+                # Check if game is actually over
+                if env.game.is_game_over():
+                    done = True
+                    break
+                
+                # Advance one environment step (will simulate opponent turns until agent's turn)
+                state, reward, done, info = env.step(0)  # Dummy/pass/advance action
+                episode_reward += reward
+                episode_length += 1
+                
+                # Double-check done flag
+                if env.game.is_game_over():
+                    done = True
+                
+                if done:
+                    break  # Episode finished
+                    
+                continue  # Re-check valid_actions for the agent
             
-            # Select action
+            # Select action with epsilon-greedy policy
             action = agent.select_action(state, valid_actions, training=True)
-            
-            # Store previous state if this is not first action
-            if prev_state is not None:
-                # Update Q-value for previous state-action pair
-                agent.update_q_value(prev_state, prev_action, prev_reward, state, valid_actions)
             
             # Take step in environment
             next_state, reward, done, info = env.step(action)
             
+            # Get valid actions for next state (if not terminal)
+            next_valid_actions = env.get_valid_actions() if not done else []
+            
+            # Q-learning update using CORRECT transition (s, a, r, s')
+            agent.update_q_value(state, action, reward, next_state, next_valid_actions)
+            
+            # Update episode statistics
             episode_reward += reward
             episode_length += 1
             
-            # Store for next update
-            prev_state = state
-            prev_action = action
-            prev_reward = reward
-            
+            # Transition to next state
             state = next_state
         
-        # Final Q-update (terminal state)
-        if prev_state is not None:
-            agent.update_q_value(prev_state, prev_action, prev_reward, state, [])
+        # Safety check for infinite loops
+        if step_count >= max_steps_per_episode:
+            if verbose:
+                print(f"Warning: Episode {episode + 1} hit step limit ({max_steps_per_episode})")
+                print(f"  Final state: Round {env.game.round_number}, "
+                      f"Agent score: {env.game.players[env.agent_index].total_score}, "
+                      f"Game over: {env.game.is_game_over()}")
+            done = True
+        
+        # Debug: Print episode completion (helpful for diagnosing hangs)
+        if verbose and (episode + 1) % 10 == 0:
+            print(f"Finished episode {episode + 1} | reward={episode_reward:.2f}, length={episode_length}")
         
         # Check if agent won
         if info.get('winner') == env.agent_name:
@@ -110,12 +132,13 @@ def train_agent(env: Flip7RLEnv, agent: QLearningAgent, num_episodes: int = 1000
         training_stats['q_table_sizes'].append(len(agent.q_table))
         training_stats['epsilon_values'].append(agent.epsilon)
         
-        # Decay epsilon
+        # Decay epsilon and learning rate
         agent.decay_epsilon()
+        agent.decay_learning_rate()
         
         # Periodic evaluation
         if (episode + 1) % eval_interval == 0:
-            win_rate = evaluate_agent(env, agent, eval_episodes, opponent_agents, verbose=False)
+            win_rate = evaluate_agent(env, agent, eval_episodes, opponent_agents, verbose=verbose)
             training_stats['win_rates'].append(win_rate)
             
             if verbose:
@@ -165,6 +188,10 @@ def evaluate_agent(env: Flip7RLEnv, agent: QLearningAgent, num_episodes: int = 1
         Win rate (0.0 to 1.0)
     """
     wins = 0
+    total_rewards = 0.0
+    q_value_stats = {'hit': [], 'stay': []}
+    unknown_states = 0
+    total_decisions = 0
     
     # Set agent to evaluation mode (no exploration)
     original_epsilon = agent.epsilon
@@ -173,17 +200,43 @@ def evaluate_agent(env: Flip7RLEnv, agent: QLearningAgent, num_episodes: int = 1
     for episode in range(num_episodes):
         state, info = env.reset()
         done = False
+        episode_reward = 0.0
+        step_count = 0
+        max_steps_per_episode = 1000  # Safety limit for evaluation
         
-        while not done:
+        while not done and step_count < max_steps_per_episode:
             valid_actions = env.get_valid_actions()
             
             if not valid_actions:
-                # Wait for turn
-                state, _, done, _ = env.step(0)
+                # Wait for turn - but limit how long we wait
+                state, reward, done, info = env.step(0)
+                episode_reward += reward
+                step_count += 1
+                # Safety: if we've waited too long, break
+                if step_count >= max_steps_per_episode:
+                    if verbose:
+                        print(f"Warning: Evaluation episode {episode + 1} hit step limit")
+                    break
                 continue
             
+            # Get Q-values for debugging (first episode only)
+            if episode == 0 and verbose:
+                q_hit = agent.get_q_value(state, 0)
+                q_stay = agent.get_q_value(state, 1)
+                q_value_stats['hit'].append(q_hit)
+                q_value_stats['stay'].append(q_stay)
+                
+                # Check if state is unknown (both Q-values are 0.0)
+                if q_hit == 0.0 and q_stay == 0.0:
+                    unknown_states += 1
+                total_decisions += 1
+            
             action = agent.select_action(state, valid_actions, training=False)
-            state, _, done, info = env.step(action)
+            state, reward, done, info = env.step(action)
+            episode_reward += reward
+            step_count += 1
+        
+        total_rewards += episode_reward
         
         if info.get('winner') == env.agent_name:
             wins += 1
@@ -192,9 +245,17 @@ def evaluate_agent(env: Flip7RLEnv, agent: QLearningAgent, num_episodes: int = 1
     agent.set_epsilon(original_epsilon)
     
     win_rate = wins / num_episodes if num_episodes > 0 else 0.0
+    avg_reward = total_rewards / num_episodes if num_episodes > 0 else 0.0
     
     if verbose:
         print(f"Evaluation: {wins}/{num_episodes} wins ({win_rate:.1%})")
+        print(f"  Avg Reward: {avg_reward:.2f}")
+        if total_decisions > 0:
+            unknown_rate = unknown_states / total_decisions
+            avg_q_hit = sum(q_value_stats['hit']) / len(q_value_stats['hit']) if q_value_stats['hit'] else 0.0
+            avg_q_stay = sum(q_value_stats['stay']) / len(q_value_stats['stay']) if q_value_stats['stay'] else 0.0
+            print(f"  Unknown States: {unknown_rate:.1%} ({unknown_states}/{total_decisions})")
+            print(f"  Avg Q(HIT): {avg_q_hit:.2f}, Avg Q(STAY): {avg_q_stay:.2f}")
     
     return win_rate
 
@@ -279,4 +340,7 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
 

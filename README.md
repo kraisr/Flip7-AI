@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-# Flip7-AI
-=======
 # Flip 7 Card Game
 
 A complete Python implementation of the Flip 7 card game with both graphical and command-line interfaces.
@@ -111,14 +108,21 @@ while not game.is_game_over():
 ## File Structure
 
 ```
-flip7_game/
-├── flip7_game.py    # Main entry point
-├── cards.py         # Card and Deck classes
-├── player.py        # Player class
-├── game.py          # Main game logic
-├── gui.py           # Graphical interface
-├── cli.py           # Command-line interface
-└── README.md        # This file
+flip7_ai/
+├── flip7_game.py          # Main entry point
+├── cards.py               # Card and Deck classes
+├── player.py              # Player class
+├── game.py                # Main game logic
+├── gui.py                 # Graphical interface
+├── cli.py                 # Command-line interface
+├── rl_env.py              # RL environment wrapper
+├── q_learning_agent.py     # Q-Learning agent
+├── agents.py              # Baseline agents
+├── train.py               # Standard training script
+├── train_curriculum.py    # Curriculum learning (recommended)
+├── evaluate.py            # Evaluation utilities
+├── README.md              # This file
+└── TRAINING.md            # Training guide
 ```
 
 ## Example Game Flow
@@ -131,11 +135,45 @@ flip7_game/
 6. **Round End**: Calculate scores and check for winner
 7. **New Round**: Reset and continue until target score reached
 
+## Reinforcement Learning
+
+This project includes a complete Q-Learning implementation for training AI agents to play Flip 7.
+
+### Quick Start
+
+**Recommended: Curriculum Learning** (better results)
+```bash
+python train_curriculum.py --episodes 20000 --learning-rate 0.3 --discount 0.99
+```
+
+**Standard Training**
+```bash
+python train.py --episodes 10000 --learning-rate 0.3 --discount 0.99
+```
+
+### Training Guide
+
+📖 **See [TRAINING.md](TRAINING.md) for complete training documentation**, including:
+- Detailed comparison of training methods
+- Why curriculum learning performs better
+- Hyperparameter tuning guide
+- Best practices and troubleshooting
+
+### RL Components
+
+- **`rl_env.py`**: OpenAI Gym-like environment wrapper
+- **`q_learning_agent.py`**: Q-Learning agent implementation
+- **`agents.py`**: Baseline agents (Random, Heuristic, Conservative, Aggressive)
+- **`train.py`**: Standard training script
+- **`train_curriculum.py`**: Curriculum learning script (recommended)
+- **`evaluate.py`**: Agent evaluation utilities
+
 ## Extending the Game
 
 The modular design makes it easy to extend:
 
 - **AI Players**: Add decision-making logic to the `Player` class
+- **Reinforcement Learning**: Train agents using Q-Learning (see [TRAINING.md](TRAINING.md))
 - **New Card Types**: Extend the `Card` class and deck creation
 - **Different Interfaces**: Create new interface modules
 - **Game Variants**: Modify rules in the `Flip7Game` class
@@ -144,4 +182,3 @@ The modular design makes it easy to extend:
 ## License
 
 This project is open source and available under the MIT License.
->>>>>>> diya-main

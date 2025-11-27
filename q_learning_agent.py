@@ -22,8 +22,8 @@ class QLearningAgent:
                  learning_rate: float = 0.1,
                  discount_factor: float = 0.95,
                  epsilon: float = 1.0,
-                 epsilon_min: float = 0.1,
-                 epsilon_decay: float = 0.995):
+                 epsilon_min: float = 0.05,  # Lower minimum for more exploration
+                 epsilon_decay: float = 0.998):  # Slower decay for more exploration
         """
         Initialize Q-Learning agent.
         
@@ -37,14 +37,21 @@ class QLearningAgent:
         """
         self.name = name
         self.learning_rate = learning_rate
+        self.initial_learning_rate = learning_rate  # Store for decay
+        self.learning_rate_min = 0.01  # Minimum learning rate
+        self.learning_rate_decay = 0.9995  # Decay per episode
         self.discount_factor = discount_factor
         self.epsilon = epsilon
         self.epsilon_min = epsilon_min
         self.epsilon_decay = epsilon_decay
         
         # Q-table: (state, action) -> Q-value
-        # Using defaultdict to initialize unknown states to 0.0
-        self.q_table: Dict[Tuple, Dict[int, float]] = defaultdict(lambda: {0: 0.0, 1: 0.0})
+        # Optimistic initialization: start with small positive values
+        # This encourages exploration and helps with sparse rewards
+        self.optimistic_init_value = 0.1
+        self.q_table: Dict[Tuple, Dict[int, float]] = defaultdict(
+            lambda: {0: self.optimistic_init_value, 1: self.optimistic_init_value}
+        )
         
         # Statistics
         self.total_updates = 0
@@ -91,8 +98,8 @@ class QLearningAgent:
         """
         q_values = self.q_table[state]
         
-        # Get Q-values for valid actions only
-        valid_q_values = {action: q_values.get(action, 0.0) for action in valid_actions}
+        # Get Q-values for valid actions only (use optimistic init if not seen)
+        valid_q_values = {action: q_values.get(action, self.optimistic_init_value) for action in valid_actions}
         
         # Find action with maximum Q-value
         if not valid_q_values:
@@ -118,13 +125,13 @@ class QLearningAgent:
             next_state: Next state after action
             next_valid_actions: Valid actions in next state
         """
-        # Get current Q-value
-        current_q = self.q_table[state].get(action, 0.0)
+        # Get current Q-value (use optimistic init if not seen)
+        current_q = self.q_table[state].get(action, self.optimistic_init_value)
         
         # Calculate max Q-value for next state
         if next_valid_actions:
             next_q_values = self.q_table[next_state]
-            max_next_q = max(next_q_values.get(a, 0.0) for a in next_valid_actions)
+            max_next_q = max(next_q_values.get(a, self.optimistic_init_value) for a in next_valid_actions)
         else:
             # Terminal state or no valid actions
             max_next_q = 0.0
@@ -149,12 +156,18 @@ class QLearningAgent:
         Returns:
             Q-value
         """
-        return self.q_table[state].get(action, 0.0)
+        return self.q_table[state].get(action, self.optimistic_init_value)
     
     def decay_epsilon(self) -> None:
         """Decay epsilon for exploration."""
         if self.epsilon > self.epsilon_min:
             self.epsilon = max(self.epsilon_min, self.epsilon * self.epsilon_decay)
+    
+    def decay_learning_rate(self) -> None:
+        """Decay learning rate for more stable learning over time."""
+        if self.learning_rate > self.learning_rate_min:
+            self.learning_rate = max(self.learning_rate_min, 
+                                   self.learning_rate * self.learning_rate_decay)
     
     def set_epsilon(self, epsilon: float) -> None:
         """
@@ -164,6 +177,30 @@ class QLearningAgent:
             epsilon: New epsilon value
         """
         self.epsilon = max(self.epsilon_min, min(1.0, epsilon))
+    
+    def set_learning_rate(self, learning_rate: float) -> None:
+        """
+        Set learning rate value.
+        
+        Args:
+            learning_rate: New learning rate value
+        """
+        self.learning_rate = max(self.learning_rate_min, min(1.0, learning_rate))
+    
+    def disable_learning_rate_decay(self) -> None:
+        """Disable learning rate decay by setting decay to 1.0."""
+        self.learning_rate_decay = 1.0
+    
+    def enable_learning_rate_decay(self, decay: float = None) -> None:
+        """
+        Enable learning rate decay.
+        
+        Args:
+            decay: Decay rate (default: 0.9995)
+        """
+        if decay is None:
+            decay = 0.9995
+        self.learning_rate_decay = decay
     
     def get_statistics(self) -> Dict:
         """
@@ -244,4 +281,7 @@ class QLearningAgent:
         """Reset exploration/exploitation counters."""
         self.exploration_count = 0
         self.exploitation_count = 0
+
+
+
 

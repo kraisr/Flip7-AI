@@ -248,3 +248,6 @@ class SmartHeuristicAgent(BaseAgent):
         
         return random.choice(valid_actions)
 
+
+
+
