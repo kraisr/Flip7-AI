@@ -11,7 +11,7 @@ The game is now organized into separate modules:
 - gui.py: Graphical user interface
 - cli.py: Command-line interface
 
-Author: AI Assistant
+Author: Us
 Version: 2.0 (Modular)
 """
 
