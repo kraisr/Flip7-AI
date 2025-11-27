@@ -1,3 +1,6 @@
+<<<<<<< HEAD
+# Flip7-AI
+=======
 # Flip 7 Card Game
 
 A complete Python implementation of the Flip 7 card game with both graphical and command-line interfaces.
@@ -141,3 +144,4 @@ The modular design makes it easy to extend:
 ## License
 
 This project is open source and available under the MIT License.
+>>>>>>> diya-main

@@ -199,7 +199,7 @@ class Flip7GUI:
             player_frame.grid(row=0, column=i, padx=5, sticky=(tk.W, tk.E, tk.N, tk.S))
             
             # Player info
-            info_text = f"Total Score: {player.total_score}\nRound Score: {player.round_score}"
+            info_text = f"Total Score: {player.total_score}\nRound Score: {player.calculate_round_score()}"
             if player.is_busted:
                 info_text += "\nBUSTED!"
             elif player.has_stayed:
@@ -266,7 +266,7 @@ class Flip7GUI:
             display = self.player_displays[i]
             
             # Update info
-            info_text = f"Total Score: {player.total_score}\nRound Score: {player.round_score}"
+            info_text = f"Total Score: {player.total_score}\nRound Score: {player.calculate_round_score()}"
             if player.is_busted:
                 info_text += "\nBUSTED!"
             elif player.has_stayed:
