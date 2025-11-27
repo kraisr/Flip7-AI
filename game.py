@@ -43,6 +43,21 @@ class Flip7Game:
         """Get the player whose turn it currently is."""
         return self.players[self.current_player_index]
     
+    def get_player_by_name(self, name: str) -> Optional[Player]:
+        """
+        Get a player by their name.
+        
+        Args:
+            name: The name of the player to find
+            
+        Returns:
+            The Player object if found, None otherwise
+        """
+        for player in self.players:
+            if player.name == name:
+                return player
+        return None
+    
     def next_turn(self) -> None:
         """Advance to the next player's turn."""
         self.current_player_index = (self.current_player_index + 1) % 3
