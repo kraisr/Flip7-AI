@@ -141,4 +141,3 @@ The modular design makes it easy to extend:
 ## License
 
 This project is open source and available under the MIT License.
->>>>>>> diya-main

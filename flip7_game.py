@@ -20,11 +20,11 @@ import argparse
 from typing import List
 
 # Import the modular components
-from cards import Card, Deck, CardType
-from player import Player
-from game import Flip7Game
-from gui import Flip7GUI
-from cli import Flip7CLI
+from game.cards import Card, Deck, CardType
+from game.player import Player
+from game.game import Flip7Game
+from game.gui import Flip7GUI
+from game.cli import Flip7CLI
 
 
 def example_game():

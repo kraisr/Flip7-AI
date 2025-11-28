@@ -25,9 +25,9 @@ from dataclasses import dataclass
 from functools import lru_cache
 from typing import Dict, List, Tuple
 
-from cards import CardType, Card, Deck
-from game import Flip7Game
-from player import Player
+from game.cards import CardType, Card, Deck
+from game.game import Flip7Game
+from game.player import Player
 
 
 @dataclass
