@@ -10,6 +10,7 @@ from typing import List, Optional
 from game import Flip7Game
 from player import Player
 from cards import Card
+from ai import OptimalTurnAI
 
 
 class Flip7GUI:
@@ -30,6 +31,10 @@ class Flip7GUI:
         # Game instance
         self.game: Optional[Flip7Game] = None
         
+        # AI support
+        self.ai = OptimalTurnAI()
+        self.ai_players = set()        # set of player names that are AI-controlled
+
         # GUI components
         self.setup_gui()
         
@@ -96,19 +101,29 @@ class Flip7GUI:
         # Title
         ttk.Label(setup_frame, text="Setup New Game", font=('Arial', 16, 'bold')).pack(pady=(0, 20))
         
-        # Player names
-        ttk.Label(setup_frame, text="Player Names:").pack(anchor=tk.W, pady=(0, 5))
+        # Players: name + Human/AI toggle
+        ttk.Label(setup_frame, text="Players:").pack(anchor=tk.W, pady=(0, 5))
         
         self.player_entries = []
+        self.player_type_vars = []  # True = AI, False = Human
+        
         for i in range(3):
             frame = ttk.Frame(setup_frame)
             frame.pack(fill=tk.X, pady=2)
             
             ttk.Label(frame, text=f"Player {i+1}:").pack(side=tk.LEFT, padx=(0, 10))
+            
             entry = ttk.Entry(frame, width=20)
             entry.pack(side=tk.LEFT, fill=tk.X, expand=True)
             entry.insert(0, f"Player {i+1}")
             self.player_entries.append(entry)
+            
+            # Default: Player 1 human, others AI (feel free to change)
+            is_ai = tk.BooleanVar(value=(i != 0))
+            ai_check = ttk.Checkbutton(frame, text="AI", variable=is_ai)
+            ai_check.pack(side=tk.LEFT, padx=(10, 0))
+            self.player_type_vars.append(is_ai)
+
         
         # Target score
         score_frame = ttk.Frame(setup_frame)
@@ -131,6 +146,7 @@ class Flip7GUI:
         try:
             player_names = [entry.get().strip() for entry in self.player_entries]
             target_score = int(self.target_score_var.get())
+            ai_flags = [var.get() for var in self.player_type_vars]
             
             # Validate player names
             if not all(player_names):
@@ -141,12 +157,20 @@ class Flip7GUI:
                 messagebox.showerror("Error", "Player names must be unique!")
                 return
             
+            # Store which players are AI
+            self.ai_players = {
+                name for name, is_ai in zip(player_names, ai_flags) if is_ai
+            }
+            
             # Create game
             self.game = Flip7Game(player_names, target_score)
             setup_window.destroy()
             
             # Initialize game display
             self.initialize_game_display()
+            
+            # If the first player is an AI, let it start playing
+            self.run_ai_turns()
             
         except ValueError:
             messagebox.showerror("Error", "Target score must be a valid number!")
@@ -264,6 +288,13 @@ class Flip7GUI:
         # Update player displays
         for i, player in enumerate(self.game.players):
             display = self.player_displays[i]
+
+            # Update frame title (mark AI players)
+            frame = display['frame']
+            title = player.name
+            if player.name in self.ai_players:
+                title = f"{player.name} (AI)"
+            frame.config(text=title)
             
             # Update info
             info_text = f"Total Score: {player.total_score}\nRound Score: {player.calculate_round_score()}"
@@ -299,11 +330,13 @@ class Flip7GUI:
             return
         
         current_player = self.game.get_current_player()
+        is_ai_turn = current_player.name in self.ai_players
         
         # Hit and Stay buttons
         if (self.game.round_active and 
             not current_player.has_stayed and 
-            not current_player.is_busted):
+            not current_player.is_busted and
+            not is_ai_turn):
             self.hit_button.config(state=tk.NORMAL)
             self.stay_button.config(state=tk.NORMAL)
         else:
@@ -340,6 +373,8 @@ class Flip7GUI:
                 winner = self.game.get_winner()
                 self.add_status_message(f"🎉 GAME OVER! {winner.name} wins with {winner.total_score} points!")
                 self.update_button_states()
+        # Let AI players act if it's their turn now
+        self.run_ai_turns()
     
     def stay_turn(self):
         """Handle the stay button click."""
@@ -365,6 +400,64 @@ class Flip7GUI:
                 winner = self.game.get_winner()
                 self.add_status_message(f"🎉 GAME OVER! {winner.name} wins with {winner.total_score} points!")
                 self.update_button_states()
+        
+        # Let AI players act if it's their turn now
+        self.run_ai_turns()
+    
+    def run_ai_turns(self):
+        """
+        Let AI-controlled players take turns automatically until it's a human's
+        turn, the round ends, or the game ends.
+        """
+        if not self.game:
+            return
+        
+        # Safety cap to avoid infinite loops if something weird happens
+        steps = 0
+        max_steps = 100
+        
+        while self.game.round_active and not self.game.is_game_over() and steps < max_steps:
+            steps += 1
+            current_player = self.game.get_current_player()
+            
+            # Stop if it's a human's turn
+            if current_player.name not in self.ai_players:
+                break
+            
+            # Decide action with the AI
+            action = self.ai.choose_action(self.game)
+            if action == "hit":
+                success, message = self.game.hit()
+                action_label = "HIT"
+            else:
+                success, message = self.game.stay()
+                action_label = "STAY"
+            
+            self.add_status_message(f"{current_player.name} (AI) chooses {action_label}: {message}")
+            
+            if not success:
+                # If something failed, don't keep looping
+                break
+            
+            # Update the display after each AI action
+            self.update_display()
+            
+            # If round ended, follow the same logic as hit/stay handlers
+            if not self.game.round_active:
+                self.show_round_results()
+                if not self.game.is_game_over():
+                    self.add_status_message("Round completed! Starting next round...")
+                    self.game.start_new_round()
+                    self.update_display()
+            
+            # If game over, announce and stop
+            if self.game.is_game_over():
+                winner = self.game.get_winner()
+                self.add_status_message(
+                    f"🎉 GAME OVER! {winner.name} wins with {winner.total_score} points!"
+                )
+                self.update_button_states()
+                break
     
     def show_round_results(self):
         """Show the results of the current round."""
@@ -391,6 +484,7 @@ class Flip7GUI:
         self.game.start_new_round()
         self.add_status_message(f"Starting Round {self.game.round_number}")
         self.update_display()
+        self.run_ai_turns()
     
     def add_status_message(self, message: str):
         """Add a message to the status display."""
