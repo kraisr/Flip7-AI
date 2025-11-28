@@ -2,7 +2,7 @@
 Direct test to see what cards are actually being drawn.
 """
 
-from game import Flip7Game
+from game.game import Flip7Game
 
 
 def test_direct_card_drawing():

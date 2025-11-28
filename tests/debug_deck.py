@@ -2,7 +2,7 @@
 Debug deck creation issue.
 """
 
-from cards import Deck
+from game.cards import Deck
 from collections import Counter
 
 

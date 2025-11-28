@@ -2,8 +2,8 @@
 Test script to verify bust handling and round progression.
 """
 
-from game import Flip7Game
-from cards import CardType
+from game.game import Flip7Game
+from game.cards import CardType
 
 
 def test_bust_scenario():

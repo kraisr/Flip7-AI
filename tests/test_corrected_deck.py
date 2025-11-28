@@ -2,7 +2,7 @@
 Test the corrected deck management system.
 """
 
-from game import Flip7Game
+from game.game import Flip7Game
 
 
 def test_corrected_deck_management():

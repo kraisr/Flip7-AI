@@ -4,8 +4,8 @@ Test script demonstrating the Flip 7 game API usage.
 This script shows how to use the modular Flip 7 game components programmatically.
 """
 
-from game import Flip7Game
-from cards import CardType
+from game.game import Flip7Game
+from game.cards import CardType
 
 
 def test_game_api():
@@ -104,7 +104,7 @@ def test_card_creation():
     """Test card creation and deck functionality."""
     print("=== Card and Deck Test ===\n")
     
-    from cards import Card, Deck, CardType
+    from game.cards import Card, Deck, CardType
     
     # Test card creation
     number_card = Card(7, CardType.NUMBER, "7")
@@ -135,8 +135,8 @@ def test_player_functionality():
     """Test player functionality."""
     print("=== Player Test ===\n")
     
-    from player import Player
-    from cards import Card, CardType
+    from game.player import Player
+    from game.cards import Card, CardType
     
     player = Player("TestPlayer")
     print(f"Created player: {player}")

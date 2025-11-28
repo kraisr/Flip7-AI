@@ -2,7 +2,7 @@
 Test to verify that the deck is never reset during a game.
 """
 
-from game import Flip7Game
+from game.game import Flip7Game
 from collections import Counter
 
 

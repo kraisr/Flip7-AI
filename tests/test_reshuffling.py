@@ -2,7 +2,7 @@
 Test deck reshuffling when deck runs out.
 """
 
-from game import Flip7Game
+from game.game import Flip7Game
 
 
 def test_deck_reshuffling():

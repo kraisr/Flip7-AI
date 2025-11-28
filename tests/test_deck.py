@@ -2,7 +2,7 @@
 Test to verify that duplicate cards of unique values are impossible.
 """
 
-from cards import Deck
+from game.cards import Deck
 from collections import Counter
 
 
