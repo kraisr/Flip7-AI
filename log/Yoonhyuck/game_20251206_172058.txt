@@ -1,0 +1,252 @@
+Starting Flip 7 GUI...
+=== Flip 7 Game Started ===
+Players: Yoonhyuck, Player 2, Player 3
+Target Score: 200
+AI Players: Player 2, Player 3
+Cards Remaining: 83
+
+Yoonhyuck drew 5
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 6
+Yoonhyuck drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 5
+Yoonhyuck drew 6
+Player 2 (AI) chooses HIT: Player 2 drew 9 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 6 and went bust!
+Yoonhyuck stayed
+
+Round 1 Results:
+------------------------------
+Yoonhyuck: 22 points (Total: 22)
+Player 2: 0 points (BUSTED) (Total: 0)
+Player 3: 0 points (BUSTED) (Total: 0)
+Round completed! Starting next round...
+Yoonhyuck drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew +10
+Yoonhyuck drew 11 and went bust!
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 4
+Player 3 (AI) chooses HIT: Player 3 drew 8 and went bust!
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 2 Results:
+------------------------------
+Yoonhyuck: 0 points (BUSTED) (Total: 22)
+Player 2: 23 points (Total: 23)
+Player 3: 0 points (BUSTED) (Total: 0)
+Round completed! Starting next round...
+Yoonhyuck drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 6
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 12 and went bust!
+Yoonhyuck stayed
+Player 2 (AI) chooses HIT: Player 2 drew 4
+Player 2 (AI) chooses HIT: Player 2 drew 8 and went bust!
+
+Round 3 Results:
+------------------------------
+Yoonhyuck: 18 points (Total: 40)
+Player 2: 0 points (BUSTED) (Total: 23)
+Player 3: 0 points (BUSTED) (Total: 0)
+Round completed! Starting next round...
+Yoonhyuck drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 7
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Yoonhyuck drew 11 and went bust!
+Player 2 (AI) chooses HIT: Player 2 drew 6
+Player 3 (AI) chooses HIT: Player 3 drew 12 and went bust!
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 4 Results:
+------------------------------
+Yoonhyuck: 0 points (BUSTED) (Total: 40)
+Player 2: 25 points (Total: 48)
+Player 3: 0 points (BUSTED) (Total: 0)
+Round completed! Starting next round...
+Yoonhyuck drew +2
+Player 2 (AI) chooses HIT: Player 2 drew 2
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Yoonhyuck drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Yoonhyuck drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 4
+Player 3 (AI) chooses STAY: Player 3 stayed
+Yoonhyuck stayed
+Player 2 (AI) chooses HIT: Player 2 drew 9 and went bust!
+
+Round 5 Results:
+------------------------------
+Yoonhyuck: 35 points (Total: 75)
+Player 2: 0 points (BUSTED) (Total: 48)
+Player 3: 26 points (Total: 26)
+Round completed! Starting next round...
+Yoonhyuck drew 0
+Player 2 (AI) chooses HIT: Player 2 drew 5
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Yoonhyuck drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 1
+Yoonhyuck drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 12 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Yoonhyuck stayed
+Player 3 (AI) chooses HIT: Player 3 drew X2
+Player 3 (AI) chooses HIT: Player 3 drew 9 and went bust!
+
+Round 6 Results:
+------------------------------
+Yoonhyuck: 19 points (Total: 94)
+Player 2: 0 points (BUSTED) (Total: 48)
+Player 3: 0 points (BUSTED) (Total: 26)
+Round completed! Starting next round...
+Yoonhyuck drew 4
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Yoonhyuck drew 5
+Player 2 (AI) chooses HIT: Player 2 drew 7
+Player 3 (AI) chooses HIT: Player 3 drew 3
+Yoonhyuck drew 2
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Yoonhyuck drew 11
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses STAY: Player 3 stayed
+Yoonhyuck drew 11 and went bust!
+
+Round 7 Results:
+------------------------------
+Yoonhyuck: 0 points (BUSTED) (Total: 94)
+Player 2: 30 points (Total: 78)
+Player 3: 20 points (Total: 46)
+Round completed! Starting next round...
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Yoonhyuck drew 6
+Player 2 (AI) chooses HIT: Player 2 drew 7
+Player 3 (AI) chooses HIT: Player 3 drew 5
+Yoonhyuck drew 11
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Yoonhyuck stayed
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 8 Results:
+------------------------------
+Yoonhyuck: 27 points (Total: 121)
+Player 2: 17 points (Total: 95)
+Player 3: 32 points (Total: 78)
+Round completed! Starting next round...
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 3
+Player 3 (AI) chooses HIT: Player 3 drew 3
+Yoonhyuck drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Yoonhyuck drew +4
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses STAY: Player 3 stayed
+Yoonhyuck stayed
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 9 Results:
+------------------------------
+Yoonhyuck: 22 points (Total: 143)
+Player 2: 26 points (Total: 121)
+Player 3: 10 points (Total: 88)
+Round completed! Starting next round...
+Yoonhyuck drew 2
+Player 2 (AI) chooses HIT: Player 2 drew 4
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Yoonhyuck drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 4
+Yoonhyuck drew 8 and went bust!
+Player 2 (AI) chooses HIT: Player 2 drew 12 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 4 and went bust!
+
+Round 10 Results:
+------------------------------
+Yoonhyuck: 0 points (BUSTED) (Total: 143)
+Player 2: 0 points (BUSTED) (Total: 121)
+Player 3: 0 points (BUSTED) (Total: 88)
+Round completed! Starting next round...
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Yoonhyuck drew 6
+Player 2 (AI) chooses HIT: Player 2 drew +2
+Player 3 (AI) chooses HIT: Player 3 drew 8 and went bust!
+Yoonhyuck drew 10 and went bust!
+Player 2 (AI) chooses HIT: Player 2 drew 10 and went bust!
+
+Round 11 Results:
+------------------------------
+Yoonhyuck: 0 points (BUSTED) (Total: 143)
+Player 2: 0 points (BUSTED) (Total: 121)
+Player 3: 0 points (BUSTED) (Total: 88)
+Round completed! Starting next round...
+Yoonhyuck drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Yoonhyuck stayed
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 12 Results:
+------------------------------
+Yoonhyuck: 17 points (Total: 160)
+Player 2: 33 points (Total: 154)
+Player 3: 27 points (Total: 115)
+Round completed! Starting next round...
+Yoonhyuck drew 9
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Yoonhyuck drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 5
+Player 3 (AI) chooses HIT: Player 3 drew 3
+Yoonhyuck stayed
+Player 2 (AI) chooses HIT: Player 2 drew 7
+Player 3 (AI) chooses HIT: Player 3 drew X2
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 13 Results:
+------------------------------
+Yoonhyuck: 20 points (Total: 180)
+Player 2: 23 points (Total: 177)
+Player 3: 46 points (Total: 161)
+Round completed! Starting next round...
+Yoonhyuck drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Yoonhyuck drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 8 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew +10
+Yoonhyuck stayed
+Player 3 (AI) chooses HIT: Player 3 drew 5
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 14 Results:
+------------------------------
+Yoonhyuck: 21 points (Total: 201)
+Player 2: 0 points (BUSTED) (Total: 177)
+Player 3: 27 points (Total: 188)
+🎉 GAME OVER! Yoonhyuck wins with 201 points!
