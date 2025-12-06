@@ -21,7 +21,7 @@ class Flip7GUI:
     game controls, and real-time game state display.
     """
     
-    def __init__(self):
+    def __init__(self, log_file=None):
         """Initialize the GUI application."""
         self.root = tk.Tk()
         self.root.title("Flip 7 Card Game")
@@ -34,6 +34,9 @@ class Flip7GUI:
         # AI support
         self.ai = OptimalTurnAI()
         self.ai_players = set()        # set of player names that are AI-controlled
+        
+        # Logging
+        self.log_file = log_file
 
         # GUI components
         self.setup_gui()
@@ -165,6 +168,15 @@ class Flip7GUI:
             # Create game
             self.game = Flip7Game(player_names, target_score)
             setup_window.destroy()
+            
+            # Log game start
+            if self.log_file:
+                self.log_file.write(f"=== Flip 7 Game Started ===\n")
+                self.log_file.write(f"Players: {', '.join(player_names)}\n")
+                self.log_file.write(f"Target Score: {target_score}\n")
+                self.log_file.write(f"AI Players: {', '.join(self.ai_players) if self.ai_players else 'None'}\n")
+                self.log_file.write(f"Cards Remaining: {self.game.deck.cards_remaining()}\n\n")
+                self.log_file.flush()
             
             # Initialize game display
             self.initialize_game_display()
@@ -487,11 +499,16 @@ class Flip7GUI:
         self.run_ai_turns()
     
     def add_status_message(self, message: str):
-        """Add a message to the status display."""
+        """Add a message to the status display and log file."""
         self.status_text.config(state=tk.NORMAL)
         self.status_text.insert(tk.END, f"{message}\n")
         self.status_text.see(tk.END)
         self.status_text.config(state=tk.DISABLED)
+        
+        # Also log to file if available
+        if self.log_file:
+            self.log_file.write(f"{message}\n")
+            self.log_file.flush()
     
     def run(self):
         """Start the GUI application."""
