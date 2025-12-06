@@ -1,0 +1,166 @@
+Starting Flip 7 GUI...
+=== Flip 7 Game Started ===
+Players: Diya, Player 2, Player 3
+Target Score: 200
+AI Players: Player 2, Player 3
+Cards Remaining: 83
+
+Diya drew 6
+Player 2 (AI) chooses HIT: Player 2 drew 6
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Diya drew +4
+Player 2 (AI) chooses HIT: Player 2 drew 7
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Diya drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Diya stayed
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 1 Results:
+------------------------------
+Diya: 22 points (Total: 22)
+Player 2: 25 points (Total: 25)
+Player 3: 31 points (Total: 31)
+Round completed! Starting next round...
+Diya drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Diya drew 9
+Player 2 (AI) chooses HIT: Player 2 drew 1
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Diya drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Diya stayed
+Player 2 (AI) chooses HIT: Player 2 drew 2
+Player 3 (AI) chooses STAY: Player 3 stayed
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 2 Results:
+------------------------------
+Diya: 28 points (Total: 50)
+Player 2: 33 points (Total: 58)
+Player 3: 28 points (Total: 59)
+Round completed! Starting next round...
+Diya drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Diya drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 5
+Diya drew 5
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 3
+Diya drew 3
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Diya drew 10
+Player 3 (AI) chooses STAY: Player 3 stayed
+Diya stayed
+
+Round 3 Results:
+------------------------------
+Diya: 36 points (Total: 86)
+Player 2: 27 points (Total: 85)
+Player 3: 26 points (Total: 85)
+Round completed! Starting next round...
+Diya drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Diya drew 0
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Diya drew 9
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 6
+Diya drew 12
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses STAY: Player 3 stayed
+Diya drew 5
+Diya stayed
+
+Round 4 Results:
+------------------------------
+Diya: 33 points (Total: 119)
+Player 2: 31 points (Total: 116)
+Player 3: 25 points (Total: 110)
+Round completed! Starting next round...
+Diya drew +10
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Diya drew 5
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Diya drew 4
+Player 2 (AI) chooses HIT: Player 2 drew 10 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Diya drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Diya drew 9
+Player 3 (AI) chooses STAY: Player 3 stayed
+Diya stayed
+
+Round 5 Results:
+------------------------------
+Diya: 39 points (Total: 158)
+Player 2: 0 points (BUSTED) (Total: 116)
+Player 3: 38 points (Total: 148)
+Round completed! Starting next round...
+Diya drew +2
+Player 2 (AI) chooses HIT: Player 2 drew 4
+Player 3 (AI) chooses HIT: Player 3 drew 3
+Diya drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 4 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Diya drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Diya stayed
+Player 3 (AI) chooses HIT: Player 3 drew 8 and went bust!
+
+Round 6 Results:
+------------------------------
+Diya: 25 points (Total: 183)
+Player 2: 0 points (BUSTED) (Total: 116)
+Player 3: 0 points (BUSTED) (Total: 148)
+Round completed! Starting next round...
+Diya drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Diya stayed
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Player 2 (AI) chooses HIT: Player 2 drew 6
+Player 3 (AI) chooses HIT: Player 3 drew 6
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 11 and went bust!
+
+Round 7 Results:
+------------------------------
+Diya: 12 points (Total: 195)
+Player 2: 27 points (Total: 143)
+Player 3: 0 points (BUSTED) (Total: 148)
+Round completed! Starting next round...
+Diya drew 4
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew X2
+Diya drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Diya stayed
+Player 2 (AI) chooses HIT: Player 2 drew 5
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 2
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 6
+Player 3 (AI) chooses STAY: Player 3 stayed
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 8 Results:
+------------------------------
+Diya: 11 points (Total: 206)
+Player 2: 31 points (Total: 174)
+Player 3: 60 points (Total: 208)
+🎉 GAME OVER! Diya wins with 206 points!

@@ -1,0 +1,158 @@
+=== Flip 7 Game Started ===
+Players: Player 1, Player 2, Player 3
+Target Score: 200
+AI Players: Player 2, Player 3
+Cards Remaining: 83
+
+Player 1 drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 12
+Player 1 drew 3
+Player 2 (AI) chooses HIT: Player 2 drew X2
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Player 1 drew 8 and went bust!
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 1 Results:
+------------------------------
+Player 1: 0 points (BUSTED) (Total: 0)
+Player 2: 42 points (Total: 42)
+Player 3: 29 points (Total: 29)
+Round completed! Starting next round...
+Player 1 drew +4
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 8
+Player 1 drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 12 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Player 1 drew 6
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Player 1 drew 2
+Player 3 (AI) chooses STAY: Player 3 stayed
+Player 1 stayed
+
+Round 2 Results:
+------------------------------
+Player 1: 20 points (Total: 20)
+Player 2: 0 points (BUSTED) (Total: 42)
+Player 3: 25 points (Total: 54)
+Round completed! Starting next round...
+Player 1 drew 5
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 4
+Player 1 drew 7
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Player 1 drew 10
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Player 1 drew 5 and went bust!
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 3 Results:
+------------------------------
+Player 1: 0 points (BUSTED) (Total: 20)
+Player 2: 23 points (Total: 65)
+Player 3: 31 points (Total: 85)
+Round completed! Starting next round...
+Player 1 drew 4
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Player 1 drew 8
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 6
+Player 1 drew 11
+Player 2 (AI) chooses HIT: Player 2 drew 1
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Player 1 stayed
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses STAY: Player 3 stayed
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 4 Results:
+------------------------------
+Player 1: 23 points (Total: 43)
+Player 2: 31 points (Total: 96)
+Player 3: 23 points (Total: 108)
+Round completed! Starting next round...
+Player 1 drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Player 1 drew 9
+Player 2 (AI) chooses HIT: Player 2 drew 9
+Player 3 (AI) chooses HIT: Player 3 drew 5
+Player 1 stayed
+Player 2 (AI) chooses HIT: Player 2 drew 10
+Player 3 (AI) chooses HIT: Player 3 drew 9 and went bust!
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 5 Results:
+------------------------------
+Player 1: 21 points (Total: 64)
+Player 2: 31 points (Total: 127)
+Player 3: 0 points (BUSTED) (Total: 108)
+Round completed! Starting next round...
+Player 1 drew 9
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 9
+Player 1 drew 4
+Player 2 (AI) chooses HIT: Player 2 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Player 1 drew 7
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 6
+Player 1 drew 11
+Player 3 (AI) chooses HIT: Player 3 drew 11 and went bust!
+Player 1 stayed
+
+Round 6 Results:
+------------------------------
+Player 1: 31 points (Total: 95)
+Player 2: 23 points (Total: 150)
+Player 3: 0 points (BUSTED) (Total: 108)
+Round completed! Starting next round...
+Player 1 drew +2
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 3 (AI) chooses HIT: Player 3 drew 5
+Player 1 drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 5
+Player 3 (AI) chooses HIT: Player 3 drew 7
+Player 1 drew 10
+Player 2 (AI) chooses HIT: Player 2 drew 8
+Player 3 (AI) chooses HIT: Player 3 drew 10
+Player 1 stayed
+Player 2 (AI) chooses STAY: Player 2 stayed
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Player 3 (AI) chooses STAY: Player 3 stayed
+
+Round 7 Results:
+------------------------------
+Player 1: 24 points (Total: 119)
+Player 2: 25 points (Total: 175)
+Player 3: 33 points (Total: 141)
+Round completed! Starting next round...
+Player 1 drew 2
+Player 2 (AI) chooses HIT: Player 2 drew 3
+Player 3 (AI) chooses HIT: Player 3 drew 11
+Player 1 drew 10
+Player 2 (AI) chooses HIT: Player 2 drew +10
+Player 3 (AI) chooses HIT: Player 3 drew 6
+Player 1 drew 3
+Player 2 (AI) chooses HIT: Player 2 drew 7
+Player 3 (AI) chooses HIT: Player 3 drew 6 and went bust!
+Player 1 drew 12
+Player 2 (AI) chooses HIT: Player 2 drew 0
+Player 1 stayed
+Player 2 (AI) chooses HIT: Player 2 drew 12
+Player 2 (AI) chooses STAY: Player 2 stayed
+
+Round 8 Results:
+------------------------------
+Player 1: 27 points (Total: 146)
+Player 2: 32 points (Total: 207)
+Player 3: 0 points (BUSTED) (Total: 141)
+🎉 GAME OVER! Player 2 wins with 207 points!
